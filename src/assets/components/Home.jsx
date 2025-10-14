@@ -291,7 +291,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
   return (
     <>
       <div key={post.id} className="post-card mb-4 bg-transparent">
-        {/* Post Header */}
+        {/* Post Header */} 
         <div className="d-flex align-items-center p-3 border-bottom bg-transparent">
           <div className="flex-grow-1 d-flex flex-column justify-content-center ps-3">
             <div className="d-flex align-items-center">
