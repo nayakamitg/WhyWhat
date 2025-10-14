@@ -107,12 +107,16 @@ const BootstrapFeed = ({ mode }) => {
   }, []);
 
   useEffect(() => {
+    console.log("Fetching1")
+    if(!posts){
+console.log("Fetching")
     dispatch(
       fetchPosts({
         search,
         nicheId: selectedCat,
       })
     );
+  }
   }, [search, selectedCat]);
 
   useEffect(() => {

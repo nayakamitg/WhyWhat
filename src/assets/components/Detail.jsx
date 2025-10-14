@@ -36,7 +36,7 @@ import {
 } from "lucide-react";
 import { useNavigate, useParams } from "react-router";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
-import { Textfit } from "react-textfit";
+// import { Textfit } from "react-textfit";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Mousewheel, Keyboard } from "swiper/modules";
@@ -52,6 +52,7 @@ import { login } from "../services/slices/userSlice";
 import QRCode from "react-qrcode-logo";
 import ThemeContext from "../services/ThemeContext";
 import { useTranslation } from "react-i18next";
+import { Textfit } from "react-textfit";
 
 const Detail = () => {
   const [page, setPage] = useState("home");
@@ -71,43 +72,6 @@ const Detail = () => {
     loading,
     error,
   } = useSelector((state) => state.post);
-
-  // Initialize swipers and handle cleanup
-  useEffect(() => {
-    if (!storySwiperRefs.current) {
-      storySwiperRefs.current = {};
-    }
-    return () => {
-      // cleanup logic here
-      if (
-        mainSwiperRef?.current &&
-        typeof mainSwiperRef.current.destroy === "function"
-      ) {
-        mainSwiperRef.current.destroy();
-        mainSwiperRef.current = null;
-      }
-
-      if (storySwiperRefs?.current) {
-        Object.entries(storySwiperRefs.current).forEach(([key, swiper]) => {
-          if (swiper && typeof swiper.destroy === "function") {
-            try {
-              swiper.destroy();
-              delete storySwiperRefs.current[key];
-            } catch (e) {
-              console.warn(`Failed to destroy story swiper ${key}:`, e);
-            }
-          }
-        });
-        storySwiperRefs.current = {};
-      }
-    };
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (error) {
-      toast.error(error);
-    }
-  }, [error]);
 
   // UI states
   const [isPlaying, setIsPlaying] = useState(true);
@@ -140,7 +104,21 @@ const Detail = () => {
     error: authError,
   } = useSelector((state) => state.user);
 
-  useEffect(() => {
+
+
+  // Extract params
+  const postId = parseInt(param.id.split(",")[0]);
+  const storyId = parseInt(param.id.split(",")[1]);
+
+  const reorderedPosts = allPosts.filter((newpost)=>newpost.type!="CD");
+
+  const initialSlideIndex = reorderedPosts.findIndex((post) => post.id === postId);
+  const initialStorySlideIndex = reorderedPosts[
+    initialSlideIndex
+  ]?.stories?.findIndex((story) => story.id === storyId);
+
+
+    useEffect(() => {
     if (!loggedIn) {
       const googleData = JSON.parse(localStorage.getItem("googleUserData"));
       if (googleData) {
@@ -169,19 +147,46 @@ const Detail = () => {
     }
   }, [error]);
 
-  // Extract params
-  const postId = parseInt(param.id.split(",")[0]);
-  const storyId = parseInt(param.id.split(",")[1]);
+  
+  // Initialize swipers and handle cleanup
+  useEffect(() => {
+    if (!storySwiperRefs.current) {
+      storySwiperRefs.current = {};
+    }
+    // return () => {
+    //   // cleanup logic here
+    //   if (
+    //     mainSwiperRef?.current &&
+    //     typeof mainSwiperRef.current.destroy === "function"
+    //   ) {
+    //     mainSwiperRef.current.destroy();
+    //     mainSwiperRef.current = null;
+    //   }
 
-  const reorderedPosts = allPosts.filter((post)=>post.type!=="CD");
+    //   if (storySwiperRefs?.current) {
+    //     Object.entries(storySwiperRefs.current).forEach(([key, swiper]) => {
+    //       if (swiper && typeof swiper.destroy === "function") {
+    //         try {
+    //           swiper.destroy();
+    //           delete storySwiperRefs.current[key];
+    //         } catch (e) {
+    //           console.warn(`Failed to destroy story swiper ${key}:`, e);
+    //         }
+    //       }
+    //     });
+    //     storySwiperRefs.current = {};
+    //   }
+    // };
+  }, [dispatch]);
 
-  const initialSlideIndex = allPosts.findIndex((post) => post.id === postId);
-  const initialStorySlideIndex = reorderedPosts[
-    initialSlideIndex
-  ]?.stories?.findIndex((story) => story.id === storyId);
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+  }, [error]);
 
-  const [activeQuestion,setActiveQuestion]=useState(initialSlideIndex)
-  const [activeAnswer,setActiveAnswer]=useState(initialStorySlideIndex)
+
+
   // Fetch like status for a story
   const fetchLikeStatus = async (storyId) => {
     if (!userData?.user?.userId) return;
@@ -880,9 +885,9 @@ const Detail = () => {
         onSwiper={(swiper) => {
           mainSwiperRef.current = swiper;
         }}
-        onDestroy={() => {
-          mainSwiperRef.current = null;
-        }}
+        // onDestroy={() => {
+        //   mainSwiperRef.current = null;
+        // }}
       >
         {reorderedPosts.map((post, postIndex) => (
           <SwiperSlide
