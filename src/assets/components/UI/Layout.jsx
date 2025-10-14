@@ -10,11 +10,9 @@ const {mode,setMode}=useContext(ThemeContext)
 const [page,setPage]=useState("home")
   return (
     <>
-    
-    
-
+   
     <Header mode={mode} setMode={setMode}/>
-    <div className="container-fluid mainHomeContainer p-0">
+    <div className="container-fluid mainHomeContainer p-0 pb-5">
     <Outlet/>
 
     </div>

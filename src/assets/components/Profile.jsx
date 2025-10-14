@@ -1,111 +1,114 @@
-// import React, { useEffect, useState } from "react";
-import { GoogleLogin } from "@react-oauth/google";
-
-function decodeJWT(token) {
-  if (!token) return null;
-
-  try {
-    const payload = token.split(".")[1];
-    const base64 = payload.replace(/-/g, "+").replace(/_/g, "/");
-    const jsonPayload = decodeURIComponent(
-      atob(base64)
-        .split("")
-        .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
-        .join("")
-    );
-    return JSON.parse(jsonPayload);
-  } catch (error) {
-    console.error("Failed to decode JWT:", error);
-    return null;
-  }
-}
-
-const validate = () => {
-  const userData = JSON.parse(localStorage.getItem("userData"));
-  if (!userData) return false;
-
-  const currentTime = Math.floor(Date.now() / 1000);
-
-  if (userData.exp > currentTime) {
-    console.log("Token valid");
-    return true;
-  } else {
-    console.log("Token expired");
-    localStorage.removeItem("userData");
-    return false;
-  }
-};
-
-
-
-import React, { useContext, useEffect, useState } from 'react';
-import {  Heart, MessageCircle, Grid, User, Eye, Ellipsis, EllipsisVertical } from 'lucide-react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchPostsSuccess } from '../services/slices/postSlice';
-import { useNavigate } from 'react-router';
-import LoginContext from "../services/LoginContext";
+﻿import React, { useContext, useEffect, useState } from "react";
+import {
+  Heart,
+  MessageCircle,
+  Grid,
+  User,
+  Eye,
+  Ellipsis,
+  EllipsisVertical,
+  MoreVertical,
+  LogOut,
+} from "lucide-react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPosts } from "../services/slices/postSlice";
+import {
+  createUser,
+  login,
+  setUserFromStorage,
+  logout,
+} from "../services/slices/userSlice";
+import { useNavigate } from "react-router";
+import { Dropdown, Spinner } from "react-bootstrap";
+import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 const Profile = () => {
-  const {posts}=useSelector((state)=>state.post)
-  const [activeTab, setActiveTab] = useState('questions');
-  const dispatch=useDispatch()
-const navigate=useNavigate()
+  const {
+    posts,
+    loading: postsLoading,
+    error: postsError,
+  } = useSelector((state) => state.post);
+  const {t}=useTranslation()
+  const {
+    userData,
+    loggedIn,
+    loading: authLoading,
+    error: authError,
+  } = useSelector((state) => state.user);
 
-  const {userData,setUserData,loggedIn,setLoggedIn}=useContext(LoginContext)
+  const [activeTab, setActiveTab] = useState("questions");
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const mode = localStorage.getItem("mode") || "light";
+
+
+  // Load posts when user is logged in
   useEffect(() => {
-    if (validate()) {
-      setUserData(JSON.parse(localStorage.getItem("userData")));
-      setLoggedIn(true);
+    if (loggedIn && posts.length <= 0) {
+      dispatch(fetchPosts());
     }
-  }, []);
+  }, [dispatch, loggedIn, posts.length]);
 
-  const handleLoginSuccess = (credentialResponse) => {
-    const token = credentialResponse.credential;
-    const userObject = decodeJWT(token);
-    localStorage.setItem("userData", JSON.stringify(userObject));
-    setUserData(userObject);
-    setLoggedIn(true);
-  };
+  // Handle posts error
+  useEffect(() => {
+    if (postsError) {
+      console.error(postsError);
+    }
+  }, [postsError]);
+  
 
-    const handleLoginError = () => {
-    console.log("Login Failed");
-    setLoggedIn(false);
-  };
-
-  useEffect(()=>{
-    dispatch(fetchPostsSuccess())
-  },[])
+  // Show login screen if user is not logged in
+  useEffect(() => {
+    if (!loggedIn) {
+      navigate("/login");
+    }
+  }, [loggedIn]);
 
 
+     useEffect(() => {
+          
+              const googleData = JSON.parse(localStorage.getItem("googleUserData"));
+              if (googleData) {
+                dispatch(
+                  login({
+                    handle: `@${googleData?.email?.split("@")[0]}`,
+                    googleData: googleData,
+                  })
+                );
+             
+            }
+          }, [navigate]);
+  
 
-
+  // Stats configuration
   const stats = [
-    { label: 'Questions', count: '50', key: 'questions' },
-    { label: 'Followers', count: '5k', key: 'followers' },
-    { label: 'Following', count: '1k', key: 'following' }
+    {
+      label: t("question"),
+      count: userData?.statistics?.totalQuestions || "0",
+      key: "questions",
+    },
+    {
+      label: t("followers"),
+      count: userData?.statistics?.totalFollowers || "0",
+      key: "followers",
+    },
+    {
+      label: t("following"),
+      count: userData?.statistics?.totalFollowing || "0",
+      key: "following",
+    },
   ];
 
   const tabs = [
-    { key: 'questions', label: 'Questions', icon: Grid },
-    { key: 'answers', label: 'Answers', icon: MessageCircle },
-    { key: 'favorite', label: 'Favorite', icon: Heart }
+    { key: "questions", label: t("questions"), icon: Grid },
+    { key: "answers", label: t("answers"), icon: MessageCircle },
+    { key: "favorite", label: t("favorite"), icon: Heart },
   ];
 
-
-
- 
-  if(!loggedIn){
-    return(
-      <div className="w-75 m-auto pt-5">
-       <GoogleLogin onSuccess={handleLoginSuccess} onError={handleLoginError} />
-      
-      </div>
-    )
-  }
-
   return (
-    <>  
+    <>
       <style>
         {`
           body {
@@ -115,10 +118,8 @@ const navigate=useNavigate()
           .profile-container {
             max-width: 100%;
             margin: 0 auto;
-            background: #fff;
+            background: transparent;
             min-height: 100vh;
-            border-left: 1px solid #e0e0e0;
-            border-right: 1px solid #e0e0e0;
           }
 
           .profile-header {
@@ -130,7 +131,7 @@ const navigate=useNavigate()
           }
 
           .profile-info {
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
+            background: transparent;
             padding: 24px;
           }
 
@@ -158,13 +159,20 @@ const navigate=useNavigate()
           }
 
           .avatar-img {
-            width: 72px;
-            height: 72px;
+            width: 80px;
+            height: 80px;
             background: #f0f0f0;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+          }
+
+          .avatar-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
 
           .status-indicator {
@@ -179,7 +187,6 @@ const navigate=useNavigate()
           }
 
           .stats-container {
-            background: rgba(255, 255, 255, 0.9);
             border-radius: 16px;
             padding: 20px;
             backdrop-filter: blur(10px);
@@ -200,23 +207,21 @@ const navigate=useNavigate()
           .stat-number {
             font-size: 22px;
             font-weight: 700;
-            color: #262626;
             margin: 0;
           }
 
           .stat-label {
             font-size: 13px;
-            color: #8e8e8e;
             font-weight: 500;
             margin: 0;
           }
 
           .tabs-container {
-            background: #fff;
+            background: #ffffffff;
             border-bottom: 1px solid #e0e0e0;
             position: sticky;
             top: 56px;
-            z-index: 99;
+            z-index: 2;
           }
 
           .tab-btn {
@@ -228,7 +233,6 @@ const navigate=useNavigate()
             align-items: center;
             justify-content: center;
             gap: 8px;
-            color: #8e8e8e;
             font-size: 14px;
             font-weight: 500;
             transition: all 0.2s ease;
@@ -236,73 +240,94 @@ const navigate=useNavigate()
           }
 
           .tab-btn.active {
-            color: #262626;
             border-bottom-color: #262626;
           }
 
-          .tab-btn:hover:not(.active) {
-            color: #262626;
-            background: #fafafa;
-          }
-.content-grid{
-padding:10px;
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-       
-.story-card{
-max-width:300px;
-flex:1 1 150px
-}
-
          
 
+          .content-grid {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+       
+          .story-card {
+            max-width: 200px;
+            flex: 1 1 170px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+          }
+
+          .username {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+          }
+
+          .bio {
+            color: #8e8e8e;
+            font-size: 14px;
+            margin: 4px 0 0 0;
+          }
+
+          @media screen and (max-width: 768px){
+          .story-card {
+            max-width: 50%;
+            flex: 1 1 150px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+          }
+          }
         `}
       </style>
 
-      <div className="profile-container">
-        {/* Header */}
-        {/* <div className="profile-header">
-          <div className="d-flex align-items-center justify-content-between p-3">
-            <div className="d-flex align-items-center">
-              <ArrowLeft size={30} className='mx-3' onClick={()=>navigate(-1)}/>
-              <h5 className="mb-0 fw-semibold">My Profile</h5>
-            </div>
-           
-          </div>
-        </div> */}
-
+      <div className={`profile-container bg-transparent`}>
         {/* Profile Info */}
-        <div className="profile-info">
-
+        <div className={`profile-info ${mode=="light"?"text-dark":"text-white"}`}>
           <div className="d-flex flex-column">
-          <div className="d-flex align-items-center">
-
-            <div className="avatar-container">
-              <div className="avatar-ring">
-                <div className="avatar-inner">
-                  <div className="avatar-img">
-                    <img className="" style={{borderRadius:"50%"}} src={userData.picture} alt="" />
-                    <User size={36} color="#999" />
+            <div className="d-flex align-items-center">
+              <div className="avatar-container">
+                <div className="avatar-ring">
+                  <div className="avatar-inner">
+                    <div className="avatar-img">
+                      <img
+                        src={userData?.user?.profileImage || "/profile.webp"}
+                        alt={userData?.user?.name ||"You"}
+                        onError={(e)=>e.target.src="/profile.webp"}
+                      />
+                    </div>
                   </div>
                 </div>
+                <div className="status-indicator"></div>
               </div>
-              <div className="status-indicator"></div>
-           
-            </div>
-            
-            <div className="flex-grow-1">
-              <h2 className="username">{userData.name}</h2>
-              <p className="bio">@tag</p>
-            </div>
-         <EllipsisVertical/>
+
+              <div className="flex-grow-1">
+                <h2 className="username">{userData?.user?.name || "User"}</h2>
+                <p className="bio">{userData?.user?.handle || "@user"}</p>
+               
+              </div>
+              <Dropdown>
+                <Dropdown.Toggle
+                  as="button"
+                  className="border-0 bg-transparent"
+                >
+                  <MoreVertical
+                    color={mode === "light" ? "black" : "white"}
+                    size={25}
+                  />
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="position-absolute language">
+                  <Dropdown.Item onClick={() => dispatch(logout())}>
+                    <LogOut size={17} className="mx-1" /> {t("log out")}
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
-      
 
           {/* Stats */}
-          <div className="stats-container">
+          <div className={`stats-container ${mode=="dark"?"bg-secondary text-light":"bg-light text-dark"}`}>
             <div className="row">
               {stats.map((stat) => (
                 <div key={stat.key} className="col-4">
@@ -317,15 +342,16 @@ flex:1 1 150px
         </div>
 
         {/* Tabs */}
-        <div className="tabs-container">
-          <div className="d-flex">
+        <div className={`tabs-container ${mode!="light"?"bg-secondary":""} text-white`}>
+          <div className="d-flex" style={{color:"white"}}>
             {tabs.map((tab) => {
               const Icon = tab.icon;
               return (
                 <button
                   key={tab.key}
+                  name={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`tab-btn ${activeTab === tab.key ? 'active' : ''}`}
+                  className={`tab-btn ${mode=="light"?"text-dark":"text-light"} ${activeTab === tab.key ? "fw-bold border-bottom border-4" : ""}`}
                 >
                   <Icon size={18} />
                   <span>{tab.label}</span>
@@ -337,11 +363,27 @@ flex:1 1 150px
 
         {/* Content Grid */}
         <div className="content-grid">
-            {posts[0]?.stories?.map((story,item) => (
-              <SingleCard post={posts[0]} story={story} />                 
-          
-            ))}
-        
+          { activeTab === "questions" ? (
+            userData?.questions?.length === 0 ? (
+              <h1 className="w-100 py-5 text-center">{t("no data found")}</h1>
+            ) : (
+              userData?.questions?.map((ques, index) => (
+                <SingleCard key={index} ques={ques} />
+              ))
+            )
+          ) : activeTab=="answers"? (userData?.answers?.length===0 ? (
+            <h1 className="w-100 py-5 text-center">{t("no data found")}</h1>
+          ) : (
+            userData?.answers?.map((ans, index) => (
+              <SingleCard key={index} type="ans" ques={ans} />
+            ))
+          )):(userData?.savedItems?.length===0 ? (
+            <h1 className="w-100 py-5 text-center">{t("no data found")}</h1>
+          ) : (
+            userData?.savedItems?.map((ans, index) => (
+              <SingleCard key={index} type="saved" ques={ans} />
+            ))
+          ))}
         </div>
       </div>
     </>
@@ -350,32 +392,34 @@ flex:1 1 150px
 
 export default Profile;
 
-
-const SingleCard = ({ post, story }) => {
+const SingleCard = ({ ques,type }) => {
   const navigate = useNavigate();
+
+  const handleNavigate=()=>{
+    if(ques.targetType=="Answer"){
+    navigate(`/detail/${[post.id, story.id].join(",")}`)}
+  
+  else{
+    navigate(`/question/${ques.targetId}`)
+  }
+}
+
+
   return (
-    <>
-      <div
-        key={story.id}
-        className={`story-card ${
-          story.gradient
-        } text-decoration-none`}
-        onClick={() => navigate(`/detail/${[post.id, story.id].join(",")}`)}
-      >
-        <div className="d-flex flex-column h-100 story-card-main">
-          {/* Story Header */}
-
-          <p className="text-center Answer">{story.answer}</p>
-
-          {/* Story Footer - Only Views */}
-          <div className="story-footer">
-            <div className="story-views">
-              <Eye size={16} className="me-2" />
-              {story.views}
-            </div>
+    <div
+      className={`story-card gradient-1 text-decoration-none`}
+      onClick={() => handleNavigate()}
+    >
+      <div className="d-flex flex-column h-100 story-card-main">
+       {type=="ans"? <p className="text-center Answer">{ques.answerText}</p>:type=="saved"?<p className="text-center Answer">{ques.descriptions || ques.title}</p>:
+        <p className="text-center Answer">{ques.questionText || ques.descriptions}</p>}
+        <div className="story-footer">
+          <div className="story-views ps-2">
+            <Eye size={16} className="me-2" />
+            {ques.totalViews || 0}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

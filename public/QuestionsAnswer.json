@@ -1,0 +1,3662 @@
+[
+  {
+    "id": 1,
+    "title": "जीवन का उद्देश्य क्या है?",
+    "name": "Aarav",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    "description": "जीवन का असली उद्देश्य क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Self Realization",
+        "answer": "Jeevan ka purpose hai apne true self ko pehchanna – Atma ka gyaan.",
+        "followers": "1.2K followers",
+        "views": "12K views",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "Service",
+        "answer": "Service, love aur compassion ke through humanity ko uplift karna hi jeevan ka asli uddeshya hai.",
+        "followers": "980 followers",
+        "views": "9.8K views",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "Karma Yoga",
+        "answer": "Karma yoga – apne duties ko sincerity se nibhana hi jeevan ka aim hai.",
+        "followers": "2.3K followers",
+        "views": "14K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "Bhakti",
+        "answer": "Bhakti aur meditation ke through Parmatma ko paana hi ultimate goal hai.",
+        "followers": "1.5K followers",
+        "views": "11K views",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "Truth Seeking",
+        "answer": "Satya aur gyaan ki khoj hi jeevan ka asli maqsad hai.",
+        "followers": "1.1K followers",
+        "views": "8.6K views",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 6,
+        "name": "Inner Growth",
+        "answer": "Apne andar ke divine qualities ko jagana aur evolve karna hi jeevan ka uddeshya hai.",
+        "followers": "2.4K followers",
+        "views": "15K views",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 7,
+        "name": "World Betterment",
+        "answer": "Achhe karmo se duniya ko beautiful aur better banana hi jeevan ka role hai.",
+        "followers": "1.9K followers",
+        "views": "13K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 8,
+        "name": "Peace",
+        "answer": "Dukh-sukh me samta paakar peace ko experience karna hi jeevan ka aim hai.",
+        "followers": "860 followers",
+        "views": "7.5K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 9,
+        "name": "Liberation",
+        "answer": "Jeevan ka asli matlab hai janm-maran se mukti paana.",
+        "followers": "2.7K followers",
+        "views": "16K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 10,
+        "name": "Oneness",
+        "answer": "Parm satya ke saath ek roop ho jaana hi jeevan ka real purpose hai.",
+        "followers": "3.1K followers",
+        "views": "18K views",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Soul & Body",
+    "name": "Riya",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "आत्मा और शरीर का वास्तविक संबंध क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Master & Vehicle",
+        "answer": "Atma is the master, sharir is the vehicle.",
+        "followers": "1.1K followers",
+        "views": "9.4K views",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 2,
+        "name": "Eternal & Temporary",
+        "answer": "Soul is eternal, body is temporary – atma sharir ko life deti hai.",
+        "followers": "920 followers",
+        "views": "7.2K views",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 3,
+        "name": "Temporary Stay",
+        "answer": "Sharir atma ka permanent ghar nahi hai, bas temporary stay hai.",
+        "followers": "1.4K followers",
+        "views": "11K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 4,
+        "name": "Sun & Reflection",
+        "answer": "Atma Surya jaisi hai, body uska pratibimb hai.",
+        "followers": "780 followers",
+        "views": "6.8K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 5,
+        "name": "Energy & Instrument",
+        "answer": "Atma energy hai, body uska instrument hai.",
+        "followers": "1.6K followers",
+        "views": "12K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 6,
+        "name": "Birth & Death",
+        "answer": "Body janm-maran leta hai, atma amar hai.",
+        "followers": "2.2K followers",
+        "views": "15K views",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 7,
+        "name": "Pilot & Plane",
+        "answer": "Relation of soul & body is like pilot & plane.",
+        "followers": "1.3K followers",
+        "views": "10K views",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 8,
+        "name": "True Self",
+        "answer": "Real 'main' = Atma, body to ek covering hai.",
+        "followers": "1.9K followers",
+        "views": "13K views",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 9,
+        "name": "Direction & Experience",
+        "answer": "Body experiences deta hai, par direction atma deti hai.",
+        "followers": "2.5K followers",
+        "views": "17K views",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 10,
+        "name": "Sadhan & Sadhya",
+        "answer": "Soul aur body ka relation hai – sadhan aur sadhya.",
+        "followers": "2.8K followers",
+        "views": "19K views",
+        "gradient": "gradient-20"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Truth",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "सत्य एक है या अनेक रूपों में प्रकट होता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "One but Many Views",
+        "answer": "Satya ek hai, par drishti alag-alag hai.",
+        "followers": "2.6K followers",
+        "views": "13K views",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "Sun Rays",
+        "answer": "Satya ek surya hai, jiske rays alag-alag form me hain.",
+        "followers": "1.4K followers",
+        "views": "6.9K views",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "Different Levels",
+        "answer": "Truth ek hai, par human mind ke level ke hisaab se alag lagta hai.",
+        "followers": "1.7K followers",
+        "views": "9.5K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "Formless Truth",
+        "answer": "Truth nirakar hai, par anek roopon me experience hota hai.",
+        "followers": "2.2K followers",
+        "views": "12K views",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "All Religions",
+        "answer": "Sabhi dharm ek hi satya ki taraf le jaate hain.",
+        "followers": "3.2K followers",
+        "views": "16K views",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 6,
+        "name": "Unchanging",
+        "answer": "Satya ka swaroop badalta nahi, sirf expression alag hota hai.",
+        "followers": "1.9K followers",
+        "views": "11K views",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 7,
+        "name": "Ocean & Streams",
+        "answer": "Satya ek samudra hai, par dharayein alag dikhte hain.",
+        "followers": "2.1K followers",
+        "views": "14K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 8,
+        "name": "Experience",
+        "answer": "Satya har vyakti ke anubhav ke hisaab se alag lagta hai.",
+        "followers": "1.5K followers",
+        "views": "8.7K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 9,
+        "name": "Infinite Forms",
+        "answer": "Satya ek hai, par uske anant forms hain.",
+        "followers": "2.4K followers",
+        "views": "15K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 10,
+        "name": "Eternal Truth",
+        "answer": "Ultimate truth ek hi hai – eternal aur unchangeable.",
+        "followers": "3K followers",
+        "views": "18K views",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Destiny or Freedom",
+    "name": "Arjun",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या मनुष्य वास्तव में स्वतंत्र है या भाग्य का दास है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Karma & Destiny",
+        "answer": "Manushya apne karmo se destiny banata hai – free bhi hai aur bound bhi.",
+        "followers": "3K followers",
+        "views": "19K views",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 2,
+        "name": "Seed & Farming",
+        "answer": "Freedom & destiny ek saath hain – beej fate hai, farming karma hai.",
+        "followers": "2.2K followers",
+        "views": "14K views",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 3,
+        "name": "Birth Conditions",
+        "answer": "Manushya kuch bandhan ke saath born hota hai, lekin karma se badal sakta hai.",
+        "followers": "1.8K followers",
+        "views": "11K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 4,
+        "name": "Past & Present Karma",
+        "answer": "Destiny past karma ka result hai, lekin present karma future create karta hai.",
+        "followers": "2.5K followers",
+        "views": "15K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 5,
+        "name": "Free Will",
+        "answer": "Human fully slave nahi hai – usko free will mili hai.",
+        "followers": "2.9K followers",
+        "views": "17K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 6,
+        "name": "Efforts Matter",
+        "answer": "Fate direction deta hai, par efforts usko badal dete hain.",
+        "followers": "1.6K followers",
+        "views": "9.8K views",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 7,
+        "name": "Soul Freedom",
+        "answer": "Atma free hai, par sharir aur situation limit karte hain.",
+        "followers": "2.1K followers",
+        "views": "13K views",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 8,
+        "name": "Boat & Current",
+        "answer": "Karma aur fate ka relation boat aur current jaisa hai.",
+        "followers": "1.7K followers",
+        "views": "10K views",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 9,
+        "name": "Choices",
+        "answer": "Manushya apne thoughts aur decisions se apni direction chunta hai.",
+        "followers": "3.3K followers",
+        "views": "20K views",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 10,
+        "name": "True Freedom",
+        "answer": "Atma hamesha free hai – destiny sirf sharir aur worldly cheezon tak simit hai.",
+        "followers": "3.8K followers",
+        "views": "22K views",
+        "gradient": "gradient-20"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "God & Suffering",
+    "name": "Meera",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "ईश्वर है तो दुख क्यों है, और दुख है तो ईश्वर क्यों है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Awakening",
+        "answer": "Dukh ek awakening hai – jo insaan ko God ki taraf le jaata hai.",
+        "followers": "4.1K followers",
+        "views": "21K views",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "Temporary World",
+        "answer": "Dukh isliye hai kyunki duniya temporary hai; God hi eternal bliss hai.",
+        "followers": "3.3K followers",
+        "views": "17K views",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "Test",
+        "answer": "Suffering ek test hai jo soul ko strong banata hai.",
+        "followers": "2.9K followers",
+        "views": "14K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "Value of Joy",
+        "answer": "Bina dukh ke sukh ka value samajhna mushkil hai.",
+        "followers": "2.2K followers",
+        "views": "11K views",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "Compassion",
+        "answer": "Dukh insaan me karuna aur daya jagata hai.",
+        "followers": "3.7K followers",
+        "views": "19K views",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 6,
+        "name": "Karma Result",
+        "answer": "Dukh zyada tar karma ka result hai; God justice karte hain.",
+        "followers": "2.6K followers",
+        "views": "15K views",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 7,
+        "name": "Soul Journey",
+        "answer": "Suffering is part of soul's journey.",
+        "followers": "2.1K followers",
+        "views": "12K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 8,
+        "name": "God's Support",
+        "answer": "God suffering nahi dete, balki usme support karte hain.",
+        "followers": "2.8K followers",
+        "views": "16K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 9,
+        "name": "Worldly Nature",
+        "answer": "Dukh duniya ka swabhav hai, God usse paar le jaane wale hain.",
+        "followers": "3.1K followers",
+        "views": "18K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 10,
+        "name": "Remembrance",
+        "answer": "Jahan dukh hai, wahan God ka smaran hi mukti ka raasta hai.",
+        "followers": "4.5K followers",
+        "views": "23K views",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "मृत्यु के बाद क्या होता है?",
+    "name": "Ananya",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "आत्मा मृत्यु के बाद कहाँ जाती है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "यात्रा",
+        "answer": "मृत्यु के बाद आत्मा अपनी यात्रा जारी रखती है – एक शरीर से दूसरे में।",
+        "followers": "1.5K अनुयायी",
+        "views": "12K बार देखा गया",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "कर्मफल",
+        "answer": "आत्मा अगले जन्म में वही अनुभव करती है जो कर्मों के अनुसार बनता है।",
+        "followers": "2.1K अनुयायी",
+        "views": "15K बार देखा गया",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "मोक्ष",
+        "answer": "जब आत्मा जन्म-मरण के चक्र से मुक्त हो जाती है, उसे मोक्ष मिलता है।",
+        "followers": "3.4K अनुयायी",
+        "views": "20K बार देखा गया",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "ध्यान का महत्व",
+    "name": "Rohit",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+    "description": "मनुष्य के जीवन में ध्यान क्यों ज़रूरी है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "मन की शांति",
+        "answer": "ध्यान से मन शांत होता है और तनाव दूर होता है।",
+        "followers": "2.8K अनुयायी",
+        "views": "18K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "आत्मज्ञान",
+        "answer": "ध्यान आत्मा से जुड़ने का माध्यम है।",
+        "followers": "3.2K अनुयायी",
+        "views": "20K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "एकाग्रता",
+        "answer": "ध्यान से एकाग्रता और कार्यक्षमता बढ़ती है।",
+        "followers": "1.9K अनुयायी",
+        "views": "14K बार देखा गया",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "सपनों का रहस्य",
+    "name": "Dev",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-0d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    "description": "सपने क्यों आते हैं और उनका अर्थ क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "अवचेतन मन",
+        "answer": "सपने हमारे अवचेतन मन की अभिव्यक्ति होते हैं।",
+        "followers": "2.4K अनुयायी",
+        "views": "16K बार देखा गया",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "संकेत",
+        "answer": "कभी-कभी सपने भविष्य या मन की गहराई के संकेत देते हैं।",
+        "followers": "1.8K अनुयायी",
+        "views": "12K बार देखा गया",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "मन की सफाई",
+        "answer": "सपने दिनभर के विचारों और भावनाओं की सफाई का तरीका भी हैं।",
+        "followers": "2.7K अनुयायी",
+        "views": "19K बार देखा गया",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "प्यार का असली अर्थ क्या है?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या प्रेम केवल संबंध है या जीवन का सार?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "निर्विरोध प्रेम",
+        "answer": "ओशो कहते हैं – सच्चा प्रेम अपेक्षारहित होता है, वह बस बहता है।",
+        "followers": "5.1K अनुयायी",
+        "views": "32K बार देखा गया",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "प्रेम और स्वतंत्रता",
+        "answer": "प्रेम का अर्थ है दूसरे को उसकी स्वतंत्रता में स्वीकार करना।",
+        "followers": "4.6K अनुयायी",
+        "views": "28K बार देखा गया",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "प्रेम ही ध्यान है",
+        "answer": "जब प्रेम शुद्ध हो जाता है तो वह ध्यान में बदल जाता है।",
+        "followers": "6.2K अनुयायी",
+        "views": "35K बार देखा गया",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "जीवन का उद्देश्य क्या है?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या जीवन का कोई लक्ष्य है या यह केवल जीने की कला है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "जीवन का उत्सव",
+        "answer": "ओशो कहते हैं – जीवन को लक्ष्य नहीं, बल्कि उत्सव की तरह जियो।",
+        "followers": "7.4K अनुयायी",
+        "views": "41K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "वर्तमान",
+        "answer": "जीवन का उद्देश्य केवल वर्तमान में जीना है।",
+        "followers": "5.9K अनुयायी",
+        "views": "36K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "अनुभव",
+        "answer": "जीवन अनुभव करने के लिए है, समझाने के लिए नहीं।",
+        "followers": "6.8K अनुयायी",
+        "views": "39K बार देखा गया",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "ध्यान क्या है?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या ध्यान एक क्रिया है या एक अवस्था?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "शांत मन",
+        "answer": "ध्यान का अर्थ है – मन को मौन में डूबो देना।",
+        "followers": "8.1K अनुयायी",
+        "views": "44K बार देखा गया",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "साक्षीभाव",
+        "answer": "ध्यान है – बिना हस्तक्षेप के देखना, केवल साक्षी होना।",
+        "followers": "7.5K अनुयायी",
+        "views": "40K बार देखा गया",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "ध्यान ही मुक्ति",
+        "answer": "ओशो कहते हैं – ध्यान से ही मनुष्य जन्म–मृत्यु से मुक्त होता है।",
+        "followers": "9.3K अनुयायी",
+        "views": "52K बार देखा गया",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "ईश्वर है या नहीं?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या ईश्वर कोई व्यक्ति है या केवल एक ऊर्जा?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "ऊर्जा",
+        "answer": "सद्गुरु कहते हैं – ईश्वर कोई व्यक्ति नहीं, यह सृष्टि की मौलिक ऊर्जा है।",
+        "followers": "6.4K अनुयायी",
+        "views": "37K बार देखा गया",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "अनुभव",
+        "answer": "ईश्वर को तर्क से नहीं, केवल अनुभव से जाना जा सकता है।",
+        "followers": "5.7K अनुयायी",
+        "views": "33K बार देखा गया",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "सृष्टि",
+        "answer": "ईश्वर का अर्थ है – यह पूरी सृष्टि, यह अस्तित्व।",
+        "followers": "7.2K अनुयायी",
+        "views": "42K बार देखा गया",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "कर्म का रहस्य",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या हमारा जीवन पूरी तरह से कर्मों पर निर्भर करता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "कर्म की परिभाषा",
+        "answer": "सद्गुरु कहते हैं – कर्म केवल भाग्य नहीं, यह हमारी स्मृति और क्रिया का संगम है।",
+        "followers": "8.3K अनुयायी",
+        "views": "46K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "चयन",
+        "answer": "हर क्षण आप नए कर्म बना रहे हैं, आप जो चुनते हैं वही भविष्य बनाता है।",
+        "followers": "7.6K अनुयायी",
+        "views": "41K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "मुक्ति",
+        "answer": "जब आप पूर्ण सजगता से जीते हैं तो कर्म से मुक्त हो जाते हैं।",
+        "followers": "9.1K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "योग का असली अर्थ",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "क्या योग केवल व्यायाम है या कुछ और?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "एकता",
+        "answer": "योग का अर्थ है – स्वयं को पूरे अस्तित्व से जोड़ लेना।",
+        "followers": "10.2K अनुयायी",
+        "views": "61K बार देखा गया",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "शरीर से परे",
+        "answer": "योग केवल आसन नहीं है, यह शरीर और मन से परे जाने का मार्ग है।",
+        "followers": "9.8K अनुयायी",
+        "views": "58K बार देखा गया",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "आत्मबोध",
+        "answer": "योग आत्मा को पहचानने और पूर्ण जागरूकता पाने की साधना है।",
+        "followers": "11.5K अनुयायी",
+        "views": "72K बार देखा गया",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "मनुष्य के दुख का कारण क्या है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1612831197319-8f4f59a142fd?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता के अनुसार मनुष्य क्यों दुखी होता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "मोह",
+        "answer": "अज्ञान और मोह से मनुष्य दुखी होता है।",
+        "followers": "8.5K",
+        "views": "47K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "इच्छा",
+        "answer": "अत्यधिक इच्छाएँ दुख का मूल कारण हैं।",
+        "followers": "7.8K",
+        "views": "44K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "अहंकार",
+        "answer": "स्वार्थ और अहंकार दुख को जन्म देते हैं।",
+        "followers": "8.2K",
+        "views": "46K",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "फल की चिंता",
+        "answer": "कर्म के फल की चिंता से ही मनुष्य दुखी होता है।",
+        "followers": "9.1K",
+        "views": "51K",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "असंतोष",
+        "answer": "संतोष न होना ही दुख का प्रमुख कारण है।",
+        "followers": "7.4K",
+        "views": "41K",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "सच्ची भक्ति किसे कहते हैं?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में भगवान ने कैसी भक्ति को श्रेष्ठ बताया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "निष्काम भक्ति",
+        "answer": "फल की इच्छा बिना की गई भक्ति ही सच्ची है।",
+        "followers": "8.9K",
+        "views": "52K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "समर्पण",
+        "answer": "मन, बुद्धि और आत्मा का पूर्ण समर्पण।",
+        "followers": "9.4K",
+        "views": "56K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "समान भाव",
+        "answer": "सभी जीवों में परमात्मा को देखना ही सच्ची भक्ति है।",
+        "followers": "8.1K",
+        "views": "48K",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "श्रद्धा",
+        "answer": "अटूट श्रद्धा और विश्वास के साथ की गई भक्ति।",
+        "followers": "7.6K",
+        "views": "43K",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "प्रेम",
+        "answer": "भक्ति का आधार प्रेम है, न कि भय या स्वार्थ।",
+        "followers": "8.3K",
+        "views": "49K",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "सफलता का रहस्य क्या है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता के अनुसार जीवन में सफलता कैसे मिलती है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "निष्काम कर्म",
+        "answer": "फल की चिंता किए बिना कर्म करने से सफलता मिलती है।",
+        "followers": "9.7K",
+        "views": "61K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "एकाग्रता",
+        "answer": "मन को स्थिर और एकाग्र रखना ही सफलता की कुंजी है।",
+        "followers": "8.9K",
+        "views": "57K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "धैर्य",
+        "answer": "धैर्य और संयम से कार्य करना आवश्यक है।",
+        "followers": "7.5K",
+        "views": "45K",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "कर्तव्य पालन",
+        "answer": "अपने धर्म और कर्तव्य का पालन करने से सफलता निश्चित है।",
+        "followers": "8.4K",
+        "views": "51K",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "समर्पण",
+        "answer": "परमात्मा को समर्पित होकर किया गया कार्य सफल होता है।",
+        "followers": "9.0K",
+        "views": "59K",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "ज्ञान क्या है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में किसे सच्चा ज्ञान कहा गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "आत्मा का ज्ञान",
+        "answer": "आत्मा और शरीर के भेद को जानना ही ज्ञान है।",
+        "followers": "9.2K",
+        "views": "54K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "सत्य की खोज",
+        "answer": "सत्य का अनुसंधान करना ही ज्ञान है।",
+        "followers": "8.7K",
+        "views": "51K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "विनम्रता",
+        "answer": "विनम्र और जिज्ञासु होना ज्ञान का लक्षण है।",
+        "followers": "7.9K",
+        "views": "47K",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "भक्ति से ज्ञान",
+        "answer": "भक्ति से प्राप्त होने वाला आत्मबोध ही सच्चा ज्ञान है।",
+        "followers": "8.4K",
+        "views": "50K",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "अज्ञान का नाश",
+        "answer": "अज्ञान का नाश ही ज्ञान की प्राप्ति है।",
+        "followers": "9.1K",
+        "views": "55K",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "सच्चा योगी कौन है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में योगी की पहचान क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "समभाव",
+        "answer": "जो सुख-दुःख, लाभ-हानि में समान रहता है।",
+        "followers": "9.5K",
+        "views": "60K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "अहिंसा",
+        "answer": "जिसके मन में सबके लिए करुणा है।",
+        "followers": "8.1K",
+        "views": "48K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "भक्ति",
+        "answer": "जो भगवान में लीन है वही श्रेष्ठ योगी है।",
+        "followers": "8.9K",
+        "views": "56K",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 4,
+        "name": "संयमी",
+        "answer": "जो इंद्रियों पर नियंत्रण रखता है।",
+        "followers": "7.4K",
+        "views": "42K",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 5,
+        "name": "त्यागी",
+        "answer": "जो स्वार्थ और अहंकार का त्याग करता है।",
+        "followers": "8.7K",
+        "views": "53K",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "मन को कैसे नियंत्रित करें?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "अर्जुन ने श्रीकृष्ण से पूछा था - चंचल मन को कैसे वश में किया जाए?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "अभ्यास और वैराग्य",
+        "answer": "मन को वश में करने के लिए अभ्यास और वैराग्य दोनों आवश्यक हैं।",
+        "followers": "9.2K",
+        "views": "54K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "धीरे-धीरे संयम",
+        "answer": "धीरे-धीरे और धैर्यपूर्वक मन को एकाग्र करना चाहिए।",
+        "followers": "7.8K",
+        "views": "45K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "विचारों का निरीक्षण",
+        "answer": "मन में आने वाले विचारों को बिना जुड़े देखना शुरू करें।",
+        "followers": "8.5K",
+        "views": "50K",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "सच्ची शांति कहाँ मिलती है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "जीवन में स्थायी शांति पाने का क्या मार्ग है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "अंदर की खोज",
+        "answer": "शांति बाहरी चीज़ों में नहीं, बल्कि अपने भीतर खोजने से मिलती है।",
+        "followers": "7.4K",
+        "views": "43K",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "समानता का भाव",
+        "answer": "सुख-दुःख में समान रहना और किसी भी परिस्थिति से प्रभावित न होना।",
+        "followers": "8.1K",
+        "views": "49K",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "ईश्वर पर भरोसा",
+        "answer": "सब कुछ ईश्वर को समर्पित कर देने से मन शांत होता है।",
+        "followers": "9.0K",
+        "views": "55K",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "What is true religion?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "In Mahabharata, what defines true 'Dharma'?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Daya & Compassion",
+        "answer": "True religion is to show kindness to all living beings.",
+        "followers": "10.1K followers",
+        "views": "62K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "Justice & Duty",
+        "answer": "Upholding justice and performing one's duty without selfish motives is Dharma.",
+        "followers": "11.5K followers",
+        "views": "68K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "Truthfulness",
+        "answer": "Satya (truth) is the foundation of all Dharma.",
+        "followers": "9.8K followers",
+        "views": "59K views",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Karma aur Bhakti me kya antar hai?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में कर्म योग और भक्ति योग को कैसे समझाया गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Karma - Action",
+        "answer": "Karma yoga is performing your duties without attachment to results.",
+        "followers": "8.2K",
+        "views": "51K",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 2,
+        "name": "Bhakti - Devotion",
+        "answer": "Bhakti yoga is surrendering all your actions and thoughts to God.",
+        "followers": "8.9K",
+        "views": "55K",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 3,
+        "name": "Final Unity",
+        "answer": "Ultimately, both paths lead to the same goal of union with the divine.",
+        "followers": "9.4K",
+        "views": "58K",
+        "gradient": "gradient-12"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Why should we control our senses?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+    "description": "What do Upanishads say about controlling the senses?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Peace of Mind",
+        "answer": "Controlling the senses leads to inner peace and stability of mind.",
+        "followers": "7.1K followers",
+        "views": "44K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 2,
+        "name": "Path to Liberation",
+        "answer": "A mind controlled by senses is bound to the material world; controlling them is the first step towards liberation.",
+        "followers": "8.5K followers",
+        "views": "50K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 3,
+        "name": "Self-Realization",
+        "answer": "Without control over senses, one cannot attain knowledge of the Self.",
+        "followers": "9.3K followers",
+        "views": "56K views",
+        "gradient": "gradient-15"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "रामराज्य क्या है?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण के अनुसार आदर्श 'रामराज्य' कैसा था?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "न्यायपूर्ण शासन",
+        "answer": "रामराज्य में हर नागरिक को न्याय मिलता था, और कोई दुखी नहीं था।",
+        "followers": "12.2K अनुयायी",
+        "views": "75K बार देखा गया",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 2,
+        "name": "समृद्धि और सुख",
+        "answer": "यह ऐसा राज्य था जहाँ हर कोई सुखी और समृद्ध था।",
+        "followers": "10.8K अनुयायी",
+        "views": "64K बार देखा गया",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 3,
+        "name": "धर्म का पालन",
+        "answer": "लोग स्वेच्छा से धर्म का पालन करते थे, जिससे समाज में सद्भाव था।",
+        "followers": "11.1K अनुयायी",
+        "views": "70K बार देखा गया",
+        "gradient": "gradient-18"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "पाप और पुण्य क्या हैं?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "वेद के अनुसार पाप और पुण्य की अवधारणा क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "पाप - अज्ञान",
+        "answer": "पाप वह कार्य है जो अज्ञान और स्वार्थ से किया जाता है।",
+        "followers": "8.5K followers",
+        "views": "48K views",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 2,
+        "name": "पुण्य - कर्तव्य",
+        "answer": "पुण्य वह है जो समाज और धर्म के हित में किया जाए।",
+        "followers": "9.1K followers",
+        "views": "53K views",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 3,
+        "name": "कर्मफल",
+        "answer": "हर क्रिया का फल होता है – पाप से दुख और पुण्य से सुख मिलता है।",
+        "followers": "9.7K followers",
+        "views": "57K views",
+        "gradient": "gradient-1"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "सच्ची खुशी क्या है?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "खुशी को कैसे परिभाषित किया जा सकता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "अंदर का आनंद",
+        "answer": "सच्ची खुशी बाहरी परिस्थितियों पर निर्भर नहीं करती, वह भीतर का आनंद है।",
+        "followers": "8.4K अनुयायी",
+        "views": "50K बार देखा गया",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 2,
+        "name": "क्षण में जीना",
+        "answer": "खुशी सिर्फ वर्तमान क्षण में जीने से मिलती है।",
+        "followers": "7.9K अनुयायी",
+        "views": "46K बार देखा गया",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 3,
+        "name": "साक्षीभाव",
+        "answer": "दुःख-सुख को समान भाव से देखना और स्वीकार करना ही सच्ची खुशी है।",
+        "followers": "9.2K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-4"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Why is forgiveness important?",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "Kabir's thoughts on the power of forgiveness.",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Freedom",
+        "answer": "Holding onto grudges is like carrying a heavy stone. Forgiveness sets you free.",
+        "followers": "4.5K followers",
+        "views": "28K views",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 2,
+        "name": "Inner Peace",
+        "answer": "Forgiving others is not for them; it is for your own peace of mind.",
+        "followers": "5.1K followers",
+        "views": "33K views",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 3,
+        "name": "God's Grace",
+        "answer": "The one who forgives is closer to God.",
+        "followers": "4.8K followers",
+        "views": "30K views",
+        "gradient": "gradient-7"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "What is the true nature of God?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-0d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    "description": "How is God described in the Vedas?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "One & Infinite",
+        "answer": "God is one, but manifests in infinite forms and names.",
+        "followers": "10.5K followers",
+        "views": "65K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 2,
+        "name": "Formless & Formed",
+        "answer": "God is both formless (Nirguna) and with form (Saguna).",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 3,
+        "name": "Omnipresent",
+        "answer": "God is present everywhere and in every living being.",
+        "followers": "11.2K followers",
+        "views": "68K views",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "What is Moksha?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "Upanishads ke anusar 'Moksha' ka arth kya hai?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Freedom from Cycle",
+        "answer": "Moksha is liberation from the cycle of birth and death.",
+        "followers": "8.7K followers",
+        "views": "54K views",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 2,
+        "name": "Self-Knowledge",
+        "answer": "Moksha is the state of realizing your true self and oneness with Brahman.",
+        "followers": "9.5K followers",
+        "views": "59K views",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 3,
+        "name": "Eternal Bliss",
+        "answer": "It is a state of eternal peace and bliss, free from all suffering.",
+        "followers": "8.9K followers",
+        "views": "56K views",
+        "gradient": "gradient-13"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "What is the difference between mind and intellect?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "How do Upanishads differentiate between Manas and Buddhi?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Mind's Role",
+        "answer": "The mind (Manas) is responsible for thoughts, desires and emotions.",
+        "followers": "6.8K followers",
+        "views": "40K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 2,
+        "name": "Intellect's Role",
+        "answer": "The intellect (Buddhi) is the discriminating faculty, which makes rational decisions.",
+        "followers": "7.5K followers",
+        "views": "45K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 3,
+        "name": "Mastery",
+        "answer": "True wisdom is when the intellect guides the mind, and not the other way around.",
+        "followers": "8.1K followers",
+        "views": "50K views",
+        "gradient": "gradient-16"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "How to overcome fear?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में भय को दूर करने का क्या उपाय बताया गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Attachment",
+        "answer": "Fear arises from attachment to worldly things and outcomes.",
+        "followers": "7.9K",
+        "views": "48K",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 2,
+        "name": "Action",
+        "answer": "Do your duty fearlessly, without concern for success or failure.",
+        "followers": "8.5K",
+        "views": "52K",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 3,
+        "name": "Trust in God",
+        "answer": "When you surrender to God, you know you are protected and fear vanishes.",
+        "followers": "9.1K",
+        "views": "57K",
+        "gradient": "gradient-19"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Ramayana ka mool sandesh kya hai?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण हमें जीवन के बारे में क्या सिखाती है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma",
+        "answer": "Ramayana teaches us the importance of Dharma in every aspect of life.",
+        "followers": "13.1K अनुयायी",
+        "views": "80K बार देखा गया",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 2,
+        "name": "Duty",
+        "answer": "It shows us how to perform our duties towards family and society, even in difficult times.",
+        "followers": "11.9K अनुयायी",
+        "views": "72K बार देखा गया",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 3,
+        "name": "Victory of Good",
+        "answer": "The epic proves that goodness and truth will always prevail over evil.",
+        "followers": "12.5K अनुयायी",
+        "views": "78K बार देखा गया",
+        "gradient": "gradient-2"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "What is the true meaning of happiness?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "Osho's perspective on true happiness.",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Beyond Joy",
+        "answer": "Happiness is not just joy; it is a state of being, beyond both joy and sorrow.",
+        "followers": "7.3K followers",
+        "views": "45K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 2,
+        "name": "Present Moment",
+        "answer": "True happiness comes from living fully in the present moment, without desire for future.",
+        "followers": "8.1K followers",
+        "views": "50K views",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 3,
+        "name": "Inward Journey",
+        "answer": "Happiness cannot be found outside; it is an inward journey.",
+        "followers": "8.8K followers",
+        "views": "54K views",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "मन को शांत करने के लिए क्या करें?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "सद्गुरु मन की शांति के लिए क्या उपाय बताते हैं?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Meditation",
+        "answer": "Meditation helps you become an observer of your thoughts, not a slave to them.",
+        "followers": "9.5K अनुयायी",
+        "views": "58K बार देखा गया",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 2,
+        "name": "Breathing",
+        "answer": "Breathing exercises (Pranayama) are key to bringing calmness to the mind.",
+        "followers": "8.7K अनुयायी",
+        "views": "53K बार देखा गया",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 3,
+        "name": "Self-Awareness",
+        "answer": "When you are self-aware, you don't react to every thought or emotion.",
+        "followers": "10.1K अनुयायी",
+        "views": "61K बार देखा गया",
+        "gradient": "gradient-8"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "What is the purpose of suffering?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में दुख और पीड़ा का क्या महत्व है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Lessons",
+        "answer": "Suffering is a teacher; it teaches us valuable lessons we can't learn otherwise.",
+        "followers": "9.2K followers",
+        "views": "55K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 2,
+        "name": "Purification",
+        "answer": "Pain purifies the soul and helps us shed our attachments and ego.",
+        "followers": "8.5K followers",
+        "views": "50K views",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 3,
+        "name": "Growth",
+        "answer": "Just as fire strengthens steel, suffering strengthens the human spirit.",
+        "followers": "10.4K followers",
+        "views": "62K views",
+        "gradient": "gradient-11"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "सत्य बोलने का क्या महत्व है?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "वेद में सत्य के महत्व पर क्या कहा गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Foundation",
+        "answer": "Satya (Truth) is the foundation of the universe. It is the highest Dharma.",
+        "followers": "11.1K अनुयायी",
+        "views": "68K बार देखा गया",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 2,
+        "name": "Path to God",
+        "answer": "By speaking the truth, one walks the path towards God.",
+        "followers": "10.5K अनुयायी",
+        "views": "64K बार देखा गया",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 3,
+        "name": "Power",
+        "answer": "The power of truth is immeasurable; it can overcome all obstacles.",
+        "followers": "11.8K अनुयायी",
+        "views": "71K बार देखा गया",
+        "gradient": "gradient-14"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "What is the importance of a Guru?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    "description": "Why is a Guru considered essential for spiritual knowledge?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dispels Ignorance",
+        "answer": "A Guru dispels the darkness of ignorance and guides us to the light of knowledge.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 2,
+        "name": "Personal Experience",
+        "answer": "A Guru helps us go beyond theoretical knowledge and experience the truth ourselves.",
+        "followers": "9.1K followers",
+        "views": "55K views",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 3,
+        "name": "Pathfinder",
+        "answer": "The Guru is a guide who has already walked the path and can show us the way to liberation.",
+        "followers": "9.7K followers",
+        "views": "60K views",
+        "gradient": "gradient-17"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Why should we detach from results?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में कर्म के फल से अनासक्ति का क्या महत्व है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Mental Peace",
+        "answer": "When you are not attached to results, you are free from anxiety and stress.",
+        "followers": "10.2K",
+        "views": "63K",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 2,
+        "name": "Better Performance",
+        "answer": "Detachment allows you to focus purely on the action, leading to better performance.",
+        "followers": "9.5K",
+        "views": "58K",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 3,
+        "name": "Spiritual Growth",
+        "answer": "This detachment is the path to spiritual liberation and union with the divine.",
+        "followers": "11.1K",
+        "views": "67K",
+        "gradient": "gradient-20"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "पांडवों ने क्यों युद्ध किया?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में पांडवों ने युद्ध क्यों लड़ा?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Justice",
+        "answer": "Paandavon ne dushashtra aur anyay ke khilaaf nyay ke liye yudh kiya.",
+        "followers": "13.5K अनुयायी",
+        "views": "82K बार देखा गया",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "Dharma",
+        "answer": "Yudh dharm ki raksha ke liye tha, na ki rajya ya shakti ke liye.",
+        "followers": "12.8K अनुयायी",
+        "views": "77K बार देखा गया",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "No Alternative",
+        "answer": "Sabhi shanti ke prayas asafal hone par yudh antim vikalp tha.",
+        "followers": "14.1K अनुयायी",
+        "views": "85K बार देखा गया",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "title": "जीवन क्या है?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "ओशो के अनुसार जीवन की परिभाषा क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Celebration",
+        "answer": "Jeevan ek celebration hai, isko enjoy karo, na ki ek problem ki tarah jiyo.",
+        "followers": "8.9K followers",
+        "views": "55K views",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "Growth",
+        "answer": "Jeevan ek growth process hai, har anubhav se sikhna hi jeevan hai.",
+        "followers": "7.6K followers",
+        "views": "48K views",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "Flow",
+        "answer": "Jeevan ek nadi jaisa hai – iske flow ke saath jiyo, resist mat karo.",
+        "followers": "9.2K followers",
+        "views": "57K views",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "title": "What is the secret of happiness?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "What does Sadhguru say about the secret to happiness?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Inner Engineering",
+        "answer": "Happiness is not something you get, it's something you create inside you.",
+        "followers": "10.4K followers",
+        "views": "64K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "Beyond Conditions",
+        "answer": "If your happiness depends on external conditions, it is not real happiness.",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "Responsibility",
+        "answer": "Being happy is your own responsibility, not someone else's.",
+        "followers": "11.1K followers",
+        "views": "68K views",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "title": "संसार और मोक्ष में क्या अंतर है?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "उपनिषद के अनुसार 'संसार' और 'मोक्ष' में क्या भेद है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Samsara",
+        "answer": "Samsara is the cycle of birth, death, and rebirth driven by desires.",
+        "followers": "7.5K अनुयायी",
+        "views": "45K बार देखा गया",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 2,
+        "name": "Moksha",
+        "answer": "Moksha is the state of freedom from this cycle, attained through knowledge.",
+        "followers": "8.2K अनुयायी",
+        "views": "50K बार देखा गया",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 3,
+        "name": "Delusion",
+        "answer": "The world seems real due to delusion; Moksha is the realization of the truth.",
+        "followers": "8.8K अनुयायी",
+        "views": "54K बार देखा गया",
+        "gradient": "gradient-12"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "title": "How to live a virtuous life?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face",
+    "description": "What does Ramayana teach about leading a virtuous life?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma",
+        "answer": "Always follow the path of Dharma, even when it is difficult.",
+        "followers": "10.5K followers",
+        "views": "65K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 2,
+        "name": "Respect",
+        "answer": "Respect your elders and fulfill your promises.",
+        "followers": "9.9K followers",
+        "views": "60K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 3,
+        "name": "Humility",
+        "answer": "Remain humble and free from ego, just like Lord Rama.",
+        "followers": "11.2K followers",
+        "views": "70K views",
+        "gradient": "gradient-15"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "title": "कर्मों से मुक्ति कैसे मिलती है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता के अनुसार कर्म बंधन से मुक्ति का मार्ग क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Sanyas",
+        "answer": "By renouncing the fruits of your actions (karmafal sanyas).",
+        "followers": "9.8K",
+        "views": "60K",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 2,
+        "name": "Bhakti",
+        "answer": "By performing all actions as a dedication to the divine.",
+        "followers": "10.5K",
+        "views": "65K",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 3,
+        "name": "Awareness",
+        "answer": "By acting with complete awareness and not being the 'doer'.",
+        "followers": "11.1K",
+        "views": "68K",
+        "gradient": "gradient-18"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "title": "Why should one be humble?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "What do the Vedas say about the importance of humility?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Foundation of Knowledge",
+        "answer": "Humility is the foundation upon which true knowledge is built.",
+        "followers": "8.7K followers",
+        "views": "53K views",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 2,
+        "name": "Respect",
+        "answer": "A humble person respects everyone and everything, which brings them respect in return.",
+        "followers": "9.1K followers",
+        "views": "56K views",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 3,
+        "name": "Path to Divinity",
+        "answer": "Humility allows one to see the divine in all beings and realize their own divinity.",
+        "followers": "9.9K followers",
+        "views": "61K views",
+        "gradient": "gradient-1"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "title": "सच्चा ज्ञान क्या है?",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "कबीर के अनुसार 'ज्ञान' का क्या अर्थ है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Heart Knowledge",
+        "answer": "Sacha gyaan woh hai jo kitaabon mein nahi, dil mein ho.",
+        "followers": "5.5K अनुयायी",
+        "views": "35K बार देखा गया",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 2,
+        "name": "Experiential",
+        "answer": "Gyaan woh hai jo anubhav se milta hai, na ki sunne se.",
+        "followers": "6.1K अनुयायी",
+        "views": "38K बार देखा गया",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 3,
+        "name": "Self-Realization",
+        "answer": "Sacha gyaan hai apne aap ko pehchanna, apni atma ka gyaan.",
+        "followers": "6.8K अनुयायी",
+        "views": "42K बार देखा गया",
+        "gradient": "gradient-4"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Why should we not fear death?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "What do the Upanishads say about the fear of death?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Eternal Soul",
+        "answer": "The soul is eternal; only the body perishes. Death is just a change of clothes for the soul.",
+        "followers": "8.9K followers",
+        "views": "55K views",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 2,
+        "name": "Beginning of a new journey",
+        "answer": "Death is not an end, but the beginning of a new journey for the soul.",
+        "followers": "8.1K followers",
+        "views": "50K views",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 3,
+        "name": "Ignorance",
+        "answer": "The fear of death comes from ignorance of our true, immortal nature.",
+        "followers": "9.5K followers",
+        "views": "58K views",
+        "gradient": "gradient-7"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "title": "क्या भगवान राम आदर्श पुरुष थे?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण में भगवान राम को 'मर्यादा पुरुषोत्तम' क्यों कहा गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma",
+        "answer": "Bhagwan Ram ne har paristhiti me dharma ka palan kiya.",
+        "followers": "12.8K अनुयायी",
+        "views": "78K बार देखा गया",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 2,
+        "name": "Kartavya",
+        "answer": "Unhone apne kartavyon ko sarvopari mana.",
+        "followers": "11.9K अनुयायी",
+        "views": "72K बार देखा गया",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 3,
+        "name": "Purity",
+        "answer": "Unka character, thought, aur action sab pure the.",
+        "followers": "13.5K अनुयायी",
+        "views": "85K बार देखा गया",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "title": "मन को नियंत्रित करने का उपाय",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "कबीर के अनुसार मन को वश में करने का तरीका क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Bhakti",
+        "answer": "Bhakti aur Ishwar smaran se man shant ho jaata hai.",
+        "followers": "7.1K अनुयायी",
+        "views": "44K बार देखा गया",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 2,
+        "name": "Satsang",
+        "answer": "Man ko control karne ke liye sadhuon aur satya ke saath raho.",
+        "followers": "6.8K अनुयायी",
+        "views": "41K बार देखा गया",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 3,
+        "name": "Self-Reflection",
+        "answer": "Apne man ki chalta ko dekho, bina uske saath involve hue.",
+        "followers": "7.5K अनुयायी",
+        "views": "46K बार देखा गया",
+        "gradient": "gradient-13"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "title": "Why should we not be selfish?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "What does Mahabharata say about the dangers of selfishness?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Destruction",
+        "answer": "Selfishness leads to the destruction of relationships and society.",
+        "followers": "9.5K followers",
+        "views": "58K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 2,
+        "name": "Pain",
+        "answer": "Selfishness brings pain not only to others but also to oneself.",
+        "followers": "10.2K followers",
+        "views": "62K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 3,
+        "name": "Ignorance",
+        "answer": "The selfish person is ignorant of the interconnectedness of all beings.",
+        "followers": "11.1K followers",
+        "views": "68K views",
+        "gradient": "gradient-16"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "title": "सच्ची स्वतंत्रता क्या है?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "सद्गुरु के अनुसार 'स्वतंत्रता' का अर्थ क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Inner Freedom",
+        "answer": "Sachi swatantrata bahari nahi, andar ki hai – man aur karm se.",
+        "followers": "10.5K अनुयायी",
+        "views": "65K बार देखा गया",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 2,
+        "name": "No Condition",
+        "answer": "Freedom is a state where you don't depend on any condition for your well-being.",
+        "followers": "9.9K अनुयायी",
+        "views": "60K बार देखा गया",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 3,
+        "name": "Responsibility",
+        "answer": "Freedom is not the absence of responsibility, but the ability to respond.",
+        "followers": "11.2K अनुयायी",
+        "views": "70K बार देखा गया",
+        "gradient": "gradient-19"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "title": "What is the true wealth?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "According to the Upanishads, what is the ultimate wealth?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Knowledge",
+        "answer": "The greatest wealth is not material possessions but the knowledge of the Self.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 2,
+        "name": "Inner Peace",
+        "answer": "A mind at peace is a far greater treasure than any amount of money.",
+        "followers": "7.9K followers",
+        "views": "48K views",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 3,
+        "name": "Virtue",
+        "answer": "The real wealth is our virtue, kindness, and good deeds.",
+        "followers": "9.1K followers",
+        "views": "55K views",
+        "gradient": "gradient-2"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "title": "राम और रावण में क्या अंतर था?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण के अनुसार राम और रावण के चरित्र में मुख्य भेद क्या था?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma vs Adharma",
+        "answer": "Ram ne hamesha dharma ka palan kiya, jabki Ravan ne adharma ka.",
+        "followers": "14.1K अनुयायी",
+        "views": "86K बार देखा गया",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 2,
+        "name": "Ego vs Humility",
+        "answer": "Ravan ke paas shakti thi, par uska ant uske ahankar ne kiya.",
+        "followers": "13.5K अनुयायी",
+        "views": "82K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 3,
+        "name": "Love vs Attachment",
+        "answer": "Ram ka prem anasakt tha, jabki Ravan ka prem moh aur vasna par adharit tha.",
+        "followers": "12.8K अनुयायी",
+        "views": "77K बार देखा गया",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "title": "मनुष्य का सबसे बड़ा शत्रु कौन है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता के अनुसार मनुष्य का सबसे बड़ा शत्रु कौन है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Anger",
+        "answer": "Krodh, isse hi manushya ki buddhi nasht hoti hai.",
+        "followers": "10.2K",
+        "views": "63K",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 2,
+        "name": "Lust",
+        "answer": "Kaam, yaani atyadhik ichcha aur vasna.",
+        "followers": "9.8K",
+        "views": "60K",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 3,
+        "name": "Ego",
+        "answer": "Ahankaar, jo gyaan aur satya ko chhupa leta hai.",
+        "followers": "10.9K",
+        "views": "67K",
+        "gradient": "gradient-8"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "title": "What is the concept of 'Maya'?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "How do Vedas define the concept of 'Maya'?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Illusion",
+        "answer": "Maya is the illusion that makes us see the temporary world as real.",
+        "followers": "9.2K followers",
+        "views": "56K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 2,
+        "name": "Cosmic Power",
+        "answer": "It is a cosmic power of God that creates the universe.",
+        "followers": "8.7K followers",
+        "views": "53K views",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 3,
+        "name": "Ignorance",
+        "answer": "Maya is the ignorance that makes us forget our true self.",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-11"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "title": "मनुष्य के जीवन का सार",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+    "description": "ओशो के अनुसार 'मनुष्य' के जीवन का क्या सार है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Consciousness",
+        "answer": "Manushya ka jeevan uski chetna ko jagane ka ek avsar hai.",
+        "followers": "8.5K अनुयायी",
+        "views": "52K बार देखा गया",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 2,
+        "name": "Meditation",
+        "answer": "Jeevan ka saar hai dhyan, jo aapko andar ki duniya se jorta hai.",
+        "followers": "9.1K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 3,
+        "name": "Bliss",
+        "answer": "The essence of life is to experience the inner bliss, free from desires.",
+        "followers": "9.8K अनुयायी",
+        "views": "60K बार देखा गया",
+        "gradient": "gradient-14"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "title": "What is the greatest donation?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में किस दान को सबसे महान बताया गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Vidya",
+        "answer": "Gyan ka daan sabse mahaan hai, kyunki woh akshay hai.",
+        "followers": "10.8K followers",
+        "views": "67K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 2,
+        "name": "Anxiety-free",
+        "answer": "Abhay daan, yaani kisi ko nirbhay karna, sabse bada daan hai.",
+        "followers": "11.2K followers",
+        "views": "70K views",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 3,
+        "name": "Charity",
+        "answer": "Food donation is the greatest charity for the one who is hungry.",
+        "followers": "10.1K followers",
+        "views": "63K views",
+        "gradient": "gradient-17"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "title": "जीवन में धैर्य का महत्व",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण हमें धैर्य के बारे में क्या सिखाती है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Example of Sita",
+        "answer": "Sita's patience in Lanka is a lesson on how to endure hardship.",
+        "followers": "12.8K अनुयायी",
+        "views": "79K बार देखा गया",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 2,
+        "name": "Ram's Patience",
+        "answer": "Ram's patience in waiting for his exile to end shows the power of patience.",
+        "followers": "13.5K अनुयायी",
+        "views": "85K बार देखा गया",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 3,
+        "name": "Victory",
+        "answer": "Patience is a key to victory; without it, one cannot achieve great goals.",
+        "followers": "14.2K अनुयायी",
+        "views": "88K बार देखा गया",
+        "gradient": "gradient-20"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "title": "How to manage desires?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में इच्छाओं को नियंत्रित करने का क्या उपाय है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Non-Attachment",
+        "answer": "Desires are born from attachment; by detaching, you control them.",
+        "followers": "10.5K",
+        "views": "65K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "Conscious Action",
+        "answer": "Act with awareness, and not driven by desires.",
+        "followers": "9.9K",
+        "views": "60K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "Higher Goal",
+        "answer": "Focus on a higher spiritual goal, and worldly desires will lose their power.",
+        "followers": "11.2K",
+        "views": "70K",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "title": "सच्चा सुख क्या है?",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "कबीर के अनुसार सच्चा सुख क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Detachment",
+        "answer": "Jab manasik ichchaon ka tyag hota hai, tab sacha sukh milta hai.",
+        "followers": "7.5K अनुयायी",
+        "views": "47K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "Simplicity",
+        "answer": "Sacha sukh saralta aur santosh me hai, na ki bahut paane me.",
+        "followers": "8.1K अनुयायी",
+        "views": "50K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "Oneness with God",
+        "answer": "Sacha sukh Bhagwan ke saath ekta me hai.",
+        "followers": "8.8K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "title": "What is the true meaning of 'Karma'?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "How is the concept of 'Karma' explained in the Mahabharata?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Cause & Effect",
+        "answer": "Karma is the universal law of cause and effect. Every action has a reaction.",
+        "followers": "11.5K followers",
+        "views": "70K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "Choice",
+        "answer": "Our present is a result of our past karma, but our future is a result of our present choices.",
+        "followers": "10.8K followers",
+        "views": "65K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "Right Action",
+        "answer": "True karma is performing the right action without selfish motives.",
+        "followers": "12.2K followers",
+        "views": "74K views",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "title": "What is the true nature of the universe?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "How do the Vedas describe the nature of the universe?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Divine Manifestation",
+        "answer": "The universe is a manifestation of the one supreme reality, Brahman.",
+        "followers": "9.5K followers",
+        "views": "58K views",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 2,
+        "name": "Cyclical",
+        "answer": "The universe goes through endless cycles of creation and dissolution.",
+        "followers": "8.8K followers",
+        "views": "54K views",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 3,
+        "name": "Interconnected",
+        "answer": "Everything in the universe is interconnected and interdependent.",
+        "followers": "10.1K followers",
+        "views": "62K views",
+        "gradient": "gradient-12"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "title": "What is the path to inner peace?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "उपनिषद के अनुसार आंतरिक शांति कैसे प्राप्त की जा सकती है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Control of Senses",
+        "answer": "By controlling the mind and senses, one can attain peace.",
+        "followers": "8.7K followers",
+        "views": "53K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 2,
+        "name": "Self-Knowledge",
+        "answer": "Peace comes from realizing that your true self is Brahman.",
+        "followers": "9.5K followers",
+        "views": "59K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 3,
+        "name": "Detachment",
+        "answer": "Detachment from worldly desires and attachments leads to lasting peace.",
+        "followers": "10.1K followers",
+        "views": "62K views",
+        "gradient": "gradient-15"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Why should we be compassionate?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण में करुणा का क्या महत्व है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Divine Nature",
+        "answer": "Compassion is a divine quality; it is what separates humans from demons.",
+        "followers": "12.5K अनुयायी",
+        "views": "78K बार देखा गया",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 2,
+        "name": "Ram's Example",
+        "answer": "Ram's compassion for all beings, even his enemies, is a great lesson.",
+        "followers": "13.2K अनुयायी",
+        "views": "82K बार देखा गया",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 3,
+        "name": "Unity",
+        "answer": "Compassion fosters a sense of unity and love in society.",
+        "followers": "14.1K अनुयायी",
+        "views": "87K बार देखा गया",
+        "gradient": "gradient-18"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "title": "कर्मफल का क्या सिद्धांत है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में 'कर्मफल' के बारे में क्या कहा गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Universal Law",
+        "answer": "Karmafal is a universal law; every action has a consequence.",
+        "followers": "11.5K",
+        "views": "71K",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 2,
+        "name": "No Control",
+        "answer": "Manushya ka karm par adhikar hai, par karmfal par nahi.",
+        "followers": "10.8K",
+        "views": "68K",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 3,
+        "name": "Attachment is the cause",
+        "answer": "It is not the action but the attachment to its result that binds us.",
+        "followers": "12.1K",
+        "views": "75K",
+        "gradient": "gradient-1"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "title": "What is the true purpose of life?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "What is the ultimate purpose of human life according to the Vedas?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma, Artha, Kama, Moksha",
+        "answer": "The four main purposes are Dharma (virtue), Artha (prosperity), Kama (desire), and Moksha (liberation).",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 2,
+        "name": "Realizing the Self",
+        "answer": "The ultimate goal is to realize the true self and merge with Brahman.",
+        "followers": "10.5K followers",
+        "views": "65K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 3,
+        "name": "Knowledge",
+        "answer": "To seek knowledge and live a life in harmony with the cosmos.",
+        "followers": "11.1K followers",
+        "views": "68K views",
+        "gradient": "gradient-4"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "title": "मन को एकाग्र कैसे करें?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "सद्गुरु एकाग्रता के लिए क्या बताते हैं?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Sattvic Food",
+        "answer": "Sattvic (pure) food and lifestyle help in calming the mind.",
+        "followers": "9.1K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 2,
+        "name": "Right Breathing",
+        "answer": "Proper breathing techniques are essential for a focused mind.",
+        "followers": "8.7K अनुयायी",
+        "views": "53K बार देखा गया",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 3,
+        "name": "Detachment",
+        "answer": "Mind automatically focuses when it is not cluttered with desires.",
+        "followers": "10.2K अनुयायी",
+        "views": "63K बार देखा गया",
+        "gradient": "gradient-7"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "title": "What is the meaning of life?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "Osho's unique perspective on the meaning of life.",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Journey",
+        "answer": "Life is a journey, not a destination. Live every moment fully.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 2,
+        "name": "No Meaning",
+        "answer": "Life has no pre-determined meaning; you have to create your own.",
+        "followers": "7.9K followers",
+        "views": "48K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 3,
+        "name": "Bliss",
+        "answer": "The meaning of life is to live it with awareness and in a state of bliss.",
+        "followers": "9.2K followers",
+        "views": "57K views",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "title": "मनुष्य का सबसे बड़ा गुण",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में मनुष्य का सबसे बड़ा गुण किसे माना गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Forgiveness",
+        "answer": "Kshama (forgiveness) is the greatest virtue of a human being.",
+        "followers": "11.1K अनुयायी",
+        "views": "68K बार देखा गया",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 2,
+        "name": "Compassion",
+        "answer": "Daya (compassion) is a quality that makes a person divine.",
+        "followers": "10.5K अनुयायी",
+        "views": "64K बार देखा गया",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 3,
+        "name": "Honesty",
+        "answer": "Truthfulness and honesty in all actions is a true mark of a great man.",
+        "followers": "11.9K अनुयायी",
+        "views": "72K बार देखा गया",
+        "gradient": "gradient-13"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "title": "How to overcome ego?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "How do Upanishads advise on overcoming the ego?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Self-Knowledge",
+        "answer": "By knowing your true self as Brahman, the ego disappears.",
+        "followers": "9.1K followers",
+        "views": "55K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 2,
+        "name": "Humility",
+        "answer": "Humility is a key practice to dissolve the ego.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 3,
+        "name": "Detachment",
+        "answer": "Ego is nourished by attachment to things and results; detach to weaken it.",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-16"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "title": "रावण का अंत क्यों हुआ?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण में रावण के अंत का मुख्य कारण क्या था?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Ego",
+        "answer": "Uska ahankar hi uske vinash ka karan tha.",
+        "followers": "14.5K अनुयायी",
+        "views": "90K बार देखा गया",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 2,
+        "name": "Ignorance",
+        "answer": "Usne gyaan hote hue bhi dharma ko nahi apnaya, yahi uski sabse badi bhool thi.",
+        "followers": "13.9K अनुयायी",
+        "views": "86K बार देखा गया",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 3,
+        "name": "Arrogance",
+        "answer": "Ravan's arrogance made him underestimate the power of God and righteousness.",
+        "followers": "15.1K अनुयायी",
+        "views": "95K बार देखा गया",
+        "gradient": "gradient-19"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "title": "क्या भगवान हर जगह हैं?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में भगवान की सर्वव्यापकता को कैसे समझाया गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Inner Self",
+        "answer": "I am the soul in every living being.",
+        "followers": "10.8K",
+        "views": "67K",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 2,
+        "name": "Manifestation",
+        "answer": "Bhagwan kehte hain, main hi prakriti aur main hi iska saar hoon.",
+        "followers": "11.5K",
+        "views": "71K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 3,
+        "name": "Energy",
+        "answer": "God is the energy that permeates the entire universe.",
+        "followers": "12.2K",
+        "views": "75K",
+        "gradient": "gradient-2"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "title": "What is the true measure of a man?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत के अनुसार किसी व्यक्ति की महानता का पैमाना क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Character",
+        "answer": "A man's greatness is measured by his character, not his wealth or power.",
+        "followers": "11.9K followers",
+        "views": "73K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 2,
+        "name": "Dharma",
+        "answer": "The one who follows Dharma, even in the face of death, is truly great.",
+        "followers": "12.5K followers",
+        "views": "78K views",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 3,
+        "name": "Humility",
+        "answer": "A great man is always humble, and a humble man is always great.",
+        "followers": "13.2K followers",
+        "views": "82K views",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "title": "सच्ची मुक्ति क्या है?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "ओशो के अनुसार 'मुक्ति' क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Freedom from mind",
+        "answer": "Mukti is not from the world, but from the mind and its concepts.",
+        "followers": "9.5K अनुयायी",
+        "views": "58K बार देखा गया",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 2,
+        "name": "Awareness",
+        "answer": "Mukti is a state of complete awareness and consciousness.",
+        "followers": "8.9K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 3,
+        "name": "Living in Present",
+        "answer": "Mukti is living every moment as if it is your last.",
+        "followers": "10.2K अनुयायी",
+        "views": "63K बार देखा गया",
+        "gradient": "gradient-8"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "title": "What is the role of destiny?",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "कबीर के अनुसार भाग्य और कर्म का क्या संबंध है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Effort",
+        "answer": "Bhagy se kuch nahi milta, mehnat se sab kuch milta hai.",
+        "followers": "7.8K followers",
+        "views": "47K views",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 2,
+        "name": "God's Will",
+        "answer": "Bhagya to Bhagwan ka likha hai, par karma insaan ke haath me hai.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 3,
+        "name": "The Potter",
+        "answer": "Kabir says, you are the potter and your destiny is the pot you make.",
+        "followers": "9.1K followers",
+        "views": "56K views",
+        "gradient": "gradient-11"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "title": "What is the true form of God?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "वेद के अनुसार ईश्वर का सच्चा स्वरूप क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Brahman",
+        "answer": "God's true form is Brahman – formless, eternal, and all-pervading.",
+        "followers": "10.5K followers",
+        "views": "65K views",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 2,
+        "name": "Omnipresent",
+        "answer": "God is not a person but a supreme cosmic energy present in all creation.",
+        "followers": "11.1K followers",
+        "views": "68K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 3,
+        "name": "Light",
+        "answer": "God is the ultimate light that dispels the darkness of ignorance.",
+        "followers": "11.8K followers",
+        "views": "72K views",
+        "gradient": "gradient-14"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "title": "जीवन में भय क्यों होता है?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "उपनिषद के अनुसार मनुष्य को भय क्यों लगता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Duality",
+        "answer": "Fear arises from the feeling of separation from the divine.",
+        "followers": "8.2K अनुयायी",
+        "views": "51K बार देखा गया",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 2,
+        "name": "Ignorance",
+        "answer": "Bhaya ka mool karan hai atma aur sharir ke bhed ka gyaan na hona.",
+        "followers": "8.8K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 3,
+        "name": "Attachment",
+        "answer": "Attachment to temporary things and people is the source of all fear.",
+        "followers": "9.5K अनुयायी",
+        "views": "58K बार देखा गया",
+        "gradient": "gradient-17"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "title": "What is the lesson of Mahabharata?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "What is the ultimate lesson of the Mahabharata?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma",
+        "answer": "Dharma is the foundation of everything. The one who follows Dharma wins in the end.",
+        "followers": "12.8K followers",
+        "views": "78K views",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 2,
+        "name": "Karma",
+        "answer": "Every action, whether good or bad, has its consequences.",
+        "followers": "13.5K followers",
+        "views": "82K views",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 3,
+        "name": "The Cycle of Life",
+        "answer": "Mahabharata teaches us about the endless cycle of life, duty, and spiritual growth.",
+        "followers": "14.2K followers",
+        "views": "89K views",
+        "gradient": "gradient-20"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "title": "सच्ची सेवा क्या है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में सच्ची सेवा का क्या अर्थ है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Selfless Action",
+        "answer": "Seva is performing your duty without any expectation of reward.",
+        "followers": "10.1K",
+        "views": "62K",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "God's Work",
+        "answer": "Sachi seva woh hai jo Bhagwan ko samarpit ho.",
+        "followers": "9.5K",
+        "views": "58K",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "Humility",
+        "answer": "Seva is doing good deeds with humility, seeing the divine in all.",
+        "followers": "10.8K",
+        "views": "66K",
+        "gradient": "gradient-3"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "title": "Why should we be grateful?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "सद्गुरु के अनुसार आभार का क्या महत्व है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Abundance",
+        "answer": "Gratitude brings abundance; it makes you aware of what you have.",
+        "followers": "9.8K अनुयायी",
+        "views": "60K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 2,
+        "name": "Inner State",
+        "answer": "Gratitude is an inner state, not just an expression.",
+        "followers": "9.2K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 3,
+        "name": "Joy",
+        "answer": "Being grateful is a way to live a joyous and fulfilled life.",
+        "followers": "10.5K अनुयायी",
+        "views": "65K बार देखा गया",
+        "gradient": "gradient-6"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "title": "सच्चा ज्ञान और अज्ञान",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "उपनिषद के अनुसार 'ज्ञान' और 'अज्ञान' में क्या भेद है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Ignorance",
+        "answer": "Agyan is the belief that the body and mind are our true self.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 2,
+        "name": "Knowledge",
+        "answer": "Gyan is the realization that we are the eternal soul.",
+        "followers": "9.1K followers",
+        "views": "56K views",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 3,
+        "name": "Path",
+        "answer": "The path of ignorance leads to bondage, while the path of knowledge leads to liberation.",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-9"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "title": "कर्ण का क्या सबक है?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में कर्ण के जीवन से हमें क्या सीखने को मिलता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Loyalty",
+        "answer": "Karn ki nishtha aur mitrata adbhut thi, par galat jagah thi.",
+        "followers": "13.5K अनुयायी",
+        "views": "82K बार देखा गया",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 2,
+        "name": "Dharma",
+        "answer": "Dharma parivar aur mitrata se bhi upar hota hai.",
+        "followers": "12.8K अनुयायी",
+        "views": "78K बार देखा गया",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 3,
+        "name": "Consequences of choices",
+        "answer": "Hamaare chunav humaare bhagya ka nirnay karte hain.",
+        "followers": "14.2K अनुयायी",
+        "views": "89K बार देखा गया",
+        "gradient": "gradient-12"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "title": "जीवन में दुःख क्यों आते हैं?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "ओशो के अनुसार दुःख का कारण क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Desire",
+        "answer": "Dukh ka mool karan hai ichcha, jab ichcha poori nahi hoti to dukh hota hai.",
+        "followers": "9.5K अनुयायी",
+        "views": "58K बार देखा गया",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 2,
+        "name": "Resistance",
+        "answer": "Dukh is not in the event, but in your resistance to it.",
+        "followers": "8.9K अनुयायी",
+        "views": "55K बार देखा गया",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 3,
+        "name": "Ignorance",
+        "answer": "Agyan aur chetna ki kami hi dukh ka karan hai.",
+        "followers": "10.2K अनुयायी",
+        "views": "62K बार देखा गया",
+        "gradient": "gradient-15"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "title": "What is the true power?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण के अनुसार सच्ची शक्ति क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma",
+        "answer": "Sachi shakti dharam ko apnane aur satya ke raste par chalne me hai.",
+        "followers": "14.8K अनुयायी",
+        "views": "92K बार देखा गया",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 2,
+        "name": "Self-Control",
+        "answer": "The greatest power is the power to control yourself and your desires.",
+        "followers": "14.1K अनुयायी",
+        "views": "87K बार देखा गया",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 3,
+        "name": "Virtue",
+        "answer": "Virtue and righteousness are more powerful than any weapon or army.",
+        "followers": "15.5K अनुयायी",
+        "views": "95K बार देखा गया",
+        "gradient": "gradient-18"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "title": "How to attain inner bliss?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में आत्म-ज्ञान और आनंद को कैसे प्राप्त किया जा सकता है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Mind Control",
+        "answer": "By calming the mind and senses, one can experience inner bliss.",
+        "followers": "11.2K",
+        "views": "69K",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 2,
+        "name": "Oneness",
+        "answer": "Anand tab milta hai jab aap apne aap ko Parmatma ka ansh samjhte hain.",
+        "followers": "10.5K",
+        "views": "65K",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 3,
+        "name": "Bhakti",
+        "answer": "Bhakti aur Ishwar se prem hi sacche anand ka rasta hai.",
+        "followers": "11.8K",
+        "views": "73K",
+        "gradient": "gradient-1"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "title": "What is the ultimate knowledge?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "वेद के अनुसार सबसे श्रेष्ठ ज्ञान क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Brahma Gyan",
+        "answer": "Brahma Gyan, or the knowledge of Brahman, is the ultimate knowledge.",
+        "followers": "10.1K followers",
+        "views": "62K views",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 2,
+        "name": "Self-Knowledge",
+        "answer": "To know yourself is to know the universe and its creator.",
+        "followers": "10.8K followers",
+        "views": "66K views",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 3,
+        "name": "One beyond all",
+        "answer": "The knowledge of that One, which is the source of all existence, is the highest.",
+        "followers": "11.5K followers",
+        "views": "71K views",
+        "gradient": "gradient-4"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "title": "सच्ची वीरता क्या है?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में सच्ची वीरता की परिभाषा क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Righteousness",
+        "answer": "Sachi veerta hai dharma ke liye ladna, na ki shakti ke liye.",
+        "followers": "14.5K अनुयायी",
+        "views": "90K बार देखा गया",
+        "gradient": "gradient-5"
+      },
+      {
+        "id": 2,
+        "name": "Humility",
+        "answer": "A truly brave person is humble and compassionate, not arrogant.",
+        "followers": "13.9K अनुयायी",
+        "views": "86K बार देखा गया",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 3,
+        "name": "Self-Control",
+        "answer": "The one who can conquer their own mind and senses is the bravest.",
+        "followers": "15.1K अनुयायी",
+        "views": "95K बार देखा गया",
+        "gradient": "gradient-7"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "title": "How to handle sorrow?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में दुख और शोक को कैसे दूर करें?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Acceptance",
+        "answer": "Accept that sorrow and joy are temporary and a part of life.",
+        "followers": "11.5K",
+        "views": "71K",
+        "gradient": "gradient-8"
+      },
+      {
+        "id": 2,
+        "name": "Karma",
+        "answer": "Focus on your duty, and not on the sorrow that comes from it.",
+        "followers": "10.8K",
+        "views": "67K",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 3,
+        "name": "Detachment",
+        "answer": "Don't be attached to worldly things, and sorrow will lose its grip.",
+        "followers": "12.1K",
+        "views": "75K",
+        "gradient": "gradient-10"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "title": "What is the true nature of love?",
+    "name": "Osho",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    "description": "ओशो के अनुसार प्रेम का सही अर्थ क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Freedom",
+        "answer": "Love is not bondage; it is the freedom to be yourself.",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-11"
+      },
+      {
+        "id": 2,
+        "name": "Meditation",
+        "answer": "Sacha prem dhyan jaisa hai – it's a state of being, not a relationship.",
+        "followers": "9.2K followers",
+        "views": "56K views",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 3,
+        "name": "Unconditional",
+        "answer": "Love is giving without expecting anything in return.",
+        "followers": "10.5K followers",
+        "views": "65K views",
+        "gradient": "gradient-13"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "title": "What is the meaning of 'Om'?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "वेद में 'ॐ' का क्या महत्व है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Cosmic Sound",
+        "answer": "Om is the cosmic sound of creation and the essence of all mantras.",
+        "followers": "11.1K followers",
+        "views": "68K views",
+        "gradient": "gradient-14"
+      },
+      {
+        "id": 2,
+        "name": "Brahman",
+        "answer": "Om represents the supreme reality, Brahman.",
+        "followers": "11.8K followers",
+        "views": "72K views",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 3,
+        "name": "Union",
+        "answer": "Chanting Om brings about the union of the individual self with the supreme self.",
+        "followers": "12.5K followers",
+        "views": "78K views",
+        "gradient": "gradient-16"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "title": "सच्चा योगी कौन है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता में योगी की पहचान क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Equanimity",
+        "answer": "Sacha yogi woh hai jo sukh-dukh aur labh-hani me samaan rahe.",
+        "followers": "10.2K",
+        "views": "63K",
+        "gradient": "gradient-17"
+      },
+      {
+        "id": 2,
+        "name": "Self-Control",
+        "answer": "Yogi is the one who has full control over his mind and senses.",
+        "followers": "11.1K",
+        "views": "68K",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 3,
+        "name": "Detached Action",
+        "answer": "A true yogi acts without attachment to the results of his actions.",
+        "followers": "11.8K",
+        "views": "72K",
+        "gradient": "gradient-19"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "title": "What is the true nature of God?",
+    "name": "Upanishads",
+    "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=100&h=100&fit=crop&crop=face",
+    "description": "Upanishad ke anusar Ishwar ka swaroop kya hai?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Brahman",
+        "answer": "Ishwar is the universal consciousness, Brahman.",
+        "followers": "9.5K followers",
+        "views": "58K views",
+        "gradient": "gradient-20"
+      },
+      {
+        "id": 2,
+        "name": "Atman",
+        "answer": "The Atman (soul) in every living being is a part of God.",
+        "followers": "10.2K followers",
+        "views": "62K views",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 3,
+        "name": "Beyond words",
+        "answer": "God's true nature cannot be described in words; it can only be experienced.",
+        "followers": "10.8K followers",
+        "views": "66K views",
+        "gradient": "gradient-2"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "title": "जीवन में दान का महत्व",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "महाभारत में दान का क्या महत्व है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Virtue",
+        "answer": "Daan (donation) is one of the highest virtues a person can have.",
+        "followers": "14.8K अनुयायी",
+        "views": "92K बार देखा गया",
+        "gradient": "gradient-3"
+      },
+      {
+        "id": 2,
+        "name": "No attachment",
+        "answer": "Sacha daan woh hai jo bina kisi phal ki ichcha ke kiya jaaye.",
+        "followers": "14.1K अनुयायी",
+        "views": "87K बार देखा गया",
+        "gradient": "gradient-4"
+      },
+      {
+        "id": 3,
+        "name": "Selflessness",
+        "answer": "Daan makes a person selfless and brings inner peace.",
+        "followers": "15.5K अनुयायी",
+        "views": "96K बार देखा गया",
+        "gradient": "gradient-5"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "title": "Why should we be truthful?",
+    "name": "Ramayana",
+    "avatar": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=100&h=100&fit=crop&crop=face",
+    "description": "रामायण में सत्य के महत्व पर क्या कहा गया है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Purity of Soul",
+        "answer": "Truthfulness is the reflection of the purity of the soul.",
+        "followers": "13.5K अनुयायी",
+        "views": "85K बार देखा गया",
+        "gradient": "gradient-6"
+      },
+      {
+        "id": 2,
+        "name": "Dharma",
+        "answer": "Satya (truth) is the foundation of Dharma.",
+        "followers": "12.8K अनुयायी",
+        "views": "79K बार देखा गया",
+        "gradient": "gradient-7"
+      },
+      {
+        "id": 3,
+        "name": "Lord Rama's example",
+        "answer": "Lord Rama always upheld truth, even at the cost of his kingdom.",
+        "followers": "14.2K अनुयायी",
+        "views": "88K बार देखा गया",
+        "gradient": "gradient-8"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "title": "मन की शक्ति क्या है?",
+    "name": "Sadhguru",
+    "avatar": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=100&h=100&fit=crop&crop=face",
+    "description": "सद्गुरु के अनुसार मन की शक्ति क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Creator",
+        "answer": "Man is a powerful creator; it can create both joy and sorrow.",
+        "followers": "10.5K अनुयायी",
+        "views": "65K बार देखा गया",
+        "gradient": "gradient-9"
+      },
+      {
+        "id": 2,
+        "name": "Tool",
+        "answer": "Man ek tool hai, iska sahi istemal karna seekho.",
+        "followers": "9.8K अनुयायी",
+        "views": "60K बार देखा गया",
+        "gradient": "gradient-10"
+      },
+      {
+        "id": 3,
+        "name": "Freedom",
+        "answer": "Sachi shakti hai apne man ke upar niyantran paana.",
+        "followers": "11.2K अनुयायी",
+        "views": "70K बार देखा गया",
+        "gradient": "gradient-11"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "title": "What is the real meaning of sin?",
+    "name": "Vedas",
+    "avatar": "https://images.unsplash.com/photo-1614287340345-962b1e3569c0?w=100&h=100&fit=crop&crop=face",
+    "description": "वेद के अनुसार पाप का असली अर्थ क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Ignorance",
+        "answer": "Sin is not an act, but a state of ignorance of our true self.",
+        "followers": "10.8K followers",
+        "views": "67K views",
+        "gradient": "gradient-12"
+      },
+      {
+        "id": 2,
+        "name": "Action against Dharma",
+        "answer": "Any action that goes against Dharma is a sin.",
+        "followers": "11.5K followers",
+        "views": "71K views",
+        "gradient": "gradient-13"
+      },
+      {
+        "id": 3,
+        "name": "Selfishness",
+        "answer": "Every selfish act, done out of ego, is a sin.",
+        "followers": "12.1K followers",
+        "views": "75K views",
+        "gradient": "gradient-14"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "title": "सच्ची शांति क्या है?",
+    "name": "Bhagavad Gita",
+    "avatar": "https://images.unsplash.com/photo-1609863542539-6f3c2f58a84a?w=100&h=100&fit=crop&crop=face",
+    "description": "गीता के अनुसार सच्ची शांति कैसे मिलती है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Inner State",
+        "answer": "Sachi shanti bahari paristhitiyo me nahi, man ke andar hai.",
+        "followers": "11.5K",
+        "views": "71K",
+        "gradient": "gradient-15"
+      },
+      {
+        "id": 2,
+        "name": "Equanimity",
+        "answer": "The one who is equanimous in all situations attains peace.",
+        "followers": "10.8K",
+        "views": "67K",
+        "gradient": "gradient-16"
+      },
+      {
+        "id": 3,
+        "name": "Surrender",
+        "answer": "By surrendering to God, you find a peace that is beyond understanding.",
+        "followers": "12.1K",
+        "views": "75K",
+        "gradient": "gradient-17"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "title": "What is the message of Mahabharata?",
+    "name": "Mahabharata",
+    "avatar": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1ec?w=100&h=100&fit=crop&crop=face",
+    "description": "Mahabharata se hume kya sikh milti hai?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Dharma",
+        "answer": "Mahabharata teaches us that the path of Dharma is the only path to victory and peace.",
+        "followers": "15.1K अनुयायी",
+        "views": "94K बार देखा गया",
+        "gradient": "gradient-18"
+      },
+      {
+        "id": 2,
+        "name": "Justice",
+        "answer": "It shows that justice will always prevail, even if it takes a long time.",
+        "followers": "14.5K अनुयायी",
+        "views": "90K बार देखा गया",
+        "gradient": "gradient-19"
+      },
+      {
+        "id": 3,
+        "name": "Consequences",
+        "answer": "Every action, good or bad, has its consequences, and no one can escape them.",
+        "followers": "15.8K अनुयायी",
+        "views": "98K बार देखा गया",
+        "gradient": "gradient-20"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "title": "What is the true nature of God?",
+    "name": "Kabir",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "description": "कबीर के अनुसार ईश्वर का सच्चा स्वरूप क्या है?",
+    "stories": [
+      {
+        "id": 1,
+        "name": "Nirakar",
+        "answer": "God is formless and cannot be confined to any temple or idol.",
+        "followers": "8.5K followers",
+        "views": "52K views",
+        "gradient": "gradient-1"
+      },
+      {
+        "id": 2,
+        "name": "Within us",
+        "answer": "God is not outside, but within every living being.",
+        "followers": "9.1K followers",
+        "views": "56K views",
+        "gradient": "gradient-2"
+      },
+      {
+        "id": 3,
+        "name": "Love",
+        "answer": "God is love; to love all is to love God.",
+        "followers": "9.8K followers",
+        "views": "60K views",
+        "gradient": "gradient-3"
+      }
+    ]
+  }
+]

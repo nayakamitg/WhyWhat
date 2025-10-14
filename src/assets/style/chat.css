@@ -1,0 +1,134 @@
+.LeftSlider {
+  position: fixed;
+  width: 350px;
+  height: calc(100vh - 50px);
+  margin-bottom: 50px;
+  border-right: 1px solid rgb(108, 108, 108);
+  z-index: 10;
+  overflow: hidden;
+  font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+}
+
+.chatWindow {
+  width: calc(100vw - 350px);
+  margin-left: 350px;
+}
+.chatWindowHide {
+  width: 100vw;
+}
+
+ .off.show{
+        border-radius:20px 20px 0 0;
+         width: calc(100vw - 350px);
+         bottom: 0;
+        }
+.avatar{
+ aspect-ratio: 1/1;   
+}
+
+::-webkit-scrollbar {
+  width: 4px; /* very thin */
+}
+
+.allchatparent{
+ height: calc(100vh - 142px);
+width: 100%;
+margin-bottom: 150px;
+overflow-y: scroll;
+}
+.allchatparent div{
+  cursor: pointer;
+}
+.PlusParent{
+   bottom: 130px;
+    z-index: 204543;
+}
+
+.PlusBtn{
+    position: absolute;
+    bottom: 120px;
+    right: 50px;
+    z-index: 204543;
+    height: 50px;
+    width: 50px;
+    /* background-color: rgb(255, 95, 95); */
+    color: white;
+    border-radius:10px;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatSearchContainer{
+  max-height: 500px;
+  border: 1px solid rgb(172, 172, 172);
+  position: absolute;
+  z-index: 10009;
+  top: 63px;
+  left: 0;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+
+}
+.chatSearchContainer input{
+  width: 100%;
+  margin: auto;
+  
+}
+.suggetionContainer{
+  overflow: scroll;
+  max-height: 400px;
+  
+
+}
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  
+}
+
+
+.offNewChat{
+height: 100vh !important;
+border-radius: 0 !important;
+}
+
+.box-recieve{
+  width: 59%;
+  background-color: white;
+  border-radius:  0 5px 5px 5px ;
+  margin-left: 4px;
+  height: 15px;
+}
+.box-send{
+  border: 1px solid black;
+  width: 59%;
+  border-radius: 5px 0px 5px  5px;
+  margin-right: 4px;
+  height: 15px;
+
+}
+.box-send-wrap, .box-recieve-wrap{
+display: flex;
+}
+.box-send-wrap{
+  justify-content: end;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.apply-theme-btn:hover{
+  color:white !important;
+}

@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../style/post.css";
 import { Ban, Languages, MoreVertical, X } from "lucide-react";
 import { useNavigate, useParams } from "react-router";
 import toast from "react-hot-toast";
 import Dropdown from "react-bootstrap/Dropdown";
-import { addStory, fetchPostsSuccess } from "../services/slices/postSlice";
+import { addAnswer, addStory, fetchPosts } from "../services/slices/postSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { Spinner } from "react-bootstrap";
+import ThemeContext from "../services/ThemeContext";
+import Footer from "./common/Footer";
+import { login } from "../services/slices/userSlice";
+import googleTransliterate from "google-input-tool";
 
 const gradientClasses = [
   "gradient-1",
@@ -35,31 +40,46 @@ const AddReply = () => {
   const [isPosting, setIsPosting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [activeMode, setActiveMode] = useState("text");
-  const { posts } = useSelector((state) => state.post);
+  const [language, setLanguage] = useState(
+    localStorage.getItem("langauge") || "hi-t-i0-und"
+  );
+  const { mode } = useContext(ThemeContext);
+  const { posts, loading, error } = useSelector((state) => state.post);
   const dispatch = useDispatch();
   const [grad, setGrad] = useState(null);
   const { id } = useParams();
-
-  console.log("posts",posts)
-
-  useEffect(() => {
-    if (posts.length <= 0) {
-      dispatch(fetchPostsSuccess());
-    }
-  }, [dispatch]);
+  const { userData, loggedIn } = useSelector((state) => state.user);
 
   const index = posts.findIndex((post) => post.id == id);
 
   const [postData, setPostData] = useState({
-    id: posts.length,
-    name: "Adam",
-    answer: "",
-    followers: "8.7K",
-    views: "20K",
-    gradient: "",
+    questionId: id,
+    answerText: "",
+    description: "",
+    language: language,
+    background: "",
+    music: "",
   });
 
-  console.log("Post", postData);
+  const handleTransliterate = () => {
+    const request = new XMLHttpRequest();
+    const inputLanguage = language;
+    const maxResult = 2;
+
+    googleTransliterate(request, postData.answerText, inputLanguage, maxResult)
+      .then((response) => {
+        // Response is an array. For single result:
+        setPostData((pre) => ({
+          ...pre,
+          description: response[0][0] + " ",
+          answerText: response[0][0] + " ",
+        }));
+      })
+      .catch((err) => {
+        toast.error("Error: " + err);
+      });
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPostData((pre) => ({
@@ -67,34 +87,50 @@ const AddReply = () => {
       [name]: value,
     }));
   };
-  console.log("post", postData);
 
+  useEffect(() => {
+    if (!loggedIn) {
+      const googleData = JSON.parse(localStorage.getItem("googleUserData"));
+      if (googleData) {
+        dispatch(
+          login({
+            handle: `@${googleData?.email?.split("@")[0]}`,
+            googleData: googleData,
+          })
+        );
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    setPostData((pre) => ({
+      ...pre,
+      background: grad,
+    }));
+  }, [grad]);
   const handlePost = () => {
-    if (!postData.answer.trim()) return;
+    if (!postData.answerText.trim()) return;
 
-    const newStory = {
-      ...postData,
-      gradient: grad || "",
-      id: posts[index]?.stories?.length + 1 || 1,
-    };
-    console.log("Postdlkfvm;", newStory);
-    setIsPosting(true);
-    dispatch(
-      addStory({
-        postId: id,
-        story: newStory,
-      })
-    );
-    setTimeout(() => {
-      setIsPosting(false);
-      setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 2000);
-    }, 1000);
+    if (loggedIn) {
+      dispatch(
+        addAnswer({
+          id: userData.user.userId,
+          data: postData,
+        })
+      );
+      setTimeout(() => {
+        setIsPosting(false);
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 2000);
+      }, 1000);
+    } else {
+      navigate("/login");
+    }
   };
 
   useEffect(() => {
     if (showSuccess) {
-      toast.success("Post successfully created");
+      toast.success("Answer Post successfully created");
       navigate("/");
     }
   }, [showSuccess]);
@@ -102,10 +138,30 @@ const AddReply = () => {
   const handleReset = () => {
     setPostData((pre) => ({
       ...pre,
-      answer: "",
+      answerText: "",
     }));
     setGrad(null);
   };
+
+  useEffect(() => {
+    if (posts.length <= 0) {
+      dispatch(fetchPosts());
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+  }, [error]);
+
+  if (loading) {
+    return (
+      <div className="Loader w-100 d-flex justify-content-center align-items-center">
+        <Spinner animation="border" />
+      </div>
+    );
+  }
 
   const getTextSizeClass = (text) => {
     const length = text.length;
@@ -113,6 +169,11 @@ const AddReply = () => {
     if (length <= 100) return "medium-text";
     if (length <= 200) return "long-text";
     return "very-long-text";
+  };
+
+  const handleLanguage = (lang) => {
+    localStorage.setItem("language", lang);
+    setLanguage(lang);
   };
 
   return (
@@ -123,18 +184,41 @@ const AddReply = () => {
           <div className="header border-0 bg-transparent">
             <div className="profile-section bg-transparent">
               <button className="close-btn" onClick={() => navigate(-1)}>
-                <X color="black" size={30} />
+                <X color={mode == "light" ? "black" : "white"} size={30} />
               </button>
             </div>
 
             <div className="action-buttons">
-              <Dropdown>
-                <Dropdown.Toggle as="button" className="btn btn-light">
-                  <Languages />
+              <Dropdown style={{ paddingTop: "0px", width: "80px" }}>
+                <Dropdown.Toggle
+                  as="button"
+                  className="border-0 bg-transparent"
+                >
+                  <span
+                    className="fs-5 px-2"
+                    style={{
+                      width: "50px",
+                      color: mode === "light" ? "black" : "white",
+                    }}
+                  >
+                    {language == "hi-t-i0-und" ? "हिन्दी" : "English"}
+                  </span>
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item>हिन्दी</Dropdown.Item>
-                  <Dropdown.Item>English</Dropdown.Item>
+                <Dropdown.Menu className="position-absolute language">
+                  <Dropdown.Item
+                    onClick={() => {
+                      handleLanguage("hi-t-i0-und");
+                    }}
+                  >
+                    हिन्दी
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() => {
+                      handleLanguage("");
+                    }}
+                  >
+                    English
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
               <button className="btn-reset" onClick={handleReset}>
@@ -143,7 +227,7 @@ const AddReply = () => {
               <button
                 className="btn-post"
                 onClick={handlePost}
-                disabled={!postData.answer.trim() || isPosting}
+                disabled={!postData.answerText.trim() || isPosting}
               >
                 {isPosting ? "Posting" : "Post"}
               </button>
@@ -157,12 +241,20 @@ const AddReply = () => {
               <p className="fs-2 text-center">{posts[index]?.description}</p>
             </div>
             <textarea
-              className={`bg-transparent border-0 form-control ${getTextSizeClass(
-                postData.answer
-              )}`}
+              className={`bg-transparent border-0 form-control ${
+                mode == "dark" ? "text-light" : ""
+              } ${getTextSizeClass(postData.answerText)}`}
               placeholder="Type your Answer..."
-              value={postData.answer}
-              name="answer"
+              value={postData.answerText}
+              name="answerText"
+              onKeyDown={(e) => {
+                (e.key == " " ||
+                  e.key == "" ||
+                  e.key == "Enter" ||
+                  e.code === "Space" ||
+                  e.key == "Spacebar") &&
+                  handleTransliterate();
+              }}
               onChange={(e) => handleChange(e)}
               maxLength={150}
             />
@@ -206,7 +298,7 @@ const AddReply = () => {
                   className={`media-btn ${
                     activeMode === "mic" ? "active" : ""
                   }`}
-                  onClick={() => setActiveMode("mic")}
+                  // onClick={() => setActiveMode("mic")}
                 >
                   Voice
                 </button>
@@ -215,18 +307,19 @@ const AddReply = () => {
 
             <div
               className={`char-count ${
-                postData.answer.length > 125
+                postData.answerText.length > 125
                   ? "danger"
-                  : postData.answer.length > 100
+                  : postData.answerText.length > 100
                   ? "warning"
                   : ""
               }`}
             >
-              {postData.answer.length}/150
+              {postData.answerText.length}/150
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

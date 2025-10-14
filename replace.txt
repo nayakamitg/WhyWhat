@@ -1,0 +1,2 @@
+737101170276-j32u74h3gfegr1832emmdguodh1iqoca.apps.googleusercontent.com==REDACTED_CLIENT_ID
+your-client-secret==REDACTED_CLIENT_SECRET

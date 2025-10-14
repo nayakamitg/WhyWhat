@@ -1,16 +1,1214 @@
 :root {
-  font-family: "Roboto", "Arial", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: "Roboto", "Arial", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
+    color-scheme: light dark;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }
+
+html {
+    scroll-behavior: smooth;
+    background-color: transparent;
+    user-select: none;
+}
+
+html,
+body {
+    height: 100dvh;
+    margin: 0;
+}
+
+
+
+.pattern-lines {
+    background-color: #E5DDD5;
+    background-image: repeating-linear-gradient(-45deg,
+            rgba(0, 0, 0, 0.03),
+            rgba(0, 0, 0, 0.03) 1px,
+            transparent 1px,
+            transparent 12px);
+}
+
+/* --- 2. Subtle Grid Pattern (CSS cross-hatch) --- */
+.pattern-grid {
+    background-color: #f8fcfb;
+    background-image:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 25px 25px;
+    background-repeat: repeat;
+}
+
+/* --- 3. Polka Dots Pattern (Repeating Radial Gradient) --- */
+.pattern-dots {
+    background-color: #f0f0f0;
+    background-image: repeating-radial-gradient(circle at center,
+            #ccc 0,
+            #ccc 2px,
+            /* Dot size */
+            transparent 2px,
+            transparent 20px
+            /* Spacing */
+        );
+}
+
+/* --- 4. Bold Diagonal Stripes --- */
+.pattern-stripes {
+    background-color: #f7f7f7;
+    background-image: linear-gradient(45deg,
+            #818181 25%,
+            transparent 25%,
+            transparent 75%,
+            #818181 75%,
+            #818181);
+    background-size: 20px 20px;
+    opacity: 0.15;
+    /* Keep it subtle */
+}
+
+/* --- 5. Checkerboard Pattern (Multiple Gradients for Tile Effect) --- */
+.pattern-checker {
+    background-color: #fff;
+    background-image:
+        linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+        linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+    background-size: 30px 30px;
+}
+
+/* --- 6. Concentric Rings --- */
+.pattern-rings {
+    background-color: #fff;
+    background-image: repeating-radial-gradient(circle,
+            #d0e0ff 0%,
+            #d0e0ff 2px,
+            transparent 2px,
+            transparent 15px);
+}
+
+/* --- 7. Woven Mesh (Overlaid transparent vertical and horizontal lines) --- */
+.pattern-mesh {
+    background-color: #fafafa;
+    background-image:
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 15px),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 15px);
+}
+
+/* --- 8. Subtle Waves (Crossed linear gradients for a fluid look) --- */
+.pattern-wave {
+    background-color: #E5DDD5;
+    background-image: repeating-linear-gradient(135deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.15) 2px,
+            transparent 2px,
+            transparent 24px),
+        repeating-linear-gradient(-135deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.15) 2px,
+            transparent 2px,
+            transparent 24px);
+}
+
+/* --- 9. Dark Solid (Tailwind Color) --- */
+.pattern-dark-solid {
+    background-color: #1C2B33;
+}
+
+/* --- 10. Light Solid Blue (Solid Color) --- */
+.pattern-solid-blue {
+    background-color: #b3d9ff;
+}
+
+/* Smiley Pattern - Light Pink Base */
+.AnimBg1 {
+    background: #ffecf0;
+    --pattern-image: radial-gradient(circle at 30% 40%, rgba(0, 0, 0, 0.1) 8%, transparent 8%),
+        radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.1) 8%, transparent 8%),
+        radial-gradient(circle at 50% 55%, rgba(0, 0, 0, 0.1) 12%, transparent 12%);
+    --pattern-size: 50px 50px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Stars Pattern - Light Blue Base */
+.AnimBg2 {
+    background: #e6f0ff;
+    --pattern-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.1) 3%, transparent 3%),
+        radial-gradient(circle at 70% 50%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 50% 70%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 1%, transparent 1%);
+    --pattern-size: 60px 60px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Circles Pattern - Light Mint Base */
+.AnimBg3 {
+    background: #e6fff1;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 15%, transparent 15%);
+    --pattern-size: 40px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Dots Grid - Light Lavender Base */
+.AnimBg4 {
+    background: #f5e6ff;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    --pattern-size: 25px 25px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Diagonal Lines - Light Coral Base */
+.AnimBg5 {
+    background: #ffe6e6;
+    --pattern-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(0, 0, 0, 0.08) 10px,
+            rgba(0, 0, 0, 0.08) 20px);
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Cross Hatch - Light Gray Base */
+.AnimBg6 {
+    background: #eee;
+    --pattern-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px),
+        repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px);
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Triangles - Light Teal Base */
+.AnimBg7 {
+    background: #e6fafa;
+    --pattern-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%);
+    --pattern-size: 40px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Hexagons - Light Yellow Base */
+.AnimBg8 {
+    background: #fff8e6;
+    --pattern-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 20%, transparent 20%),
+        radial-gradient(circle at 0% 100%, rgba(0, 0, 0, 0.1) 20%, transparent 20%),
+        radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.1) 20%, transparent 20%);
+    --pattern-size: 50px 43px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Waves - Light Cerulean Base */
+.AnimBg9 {
+    background: #e6f6ff;
+    --pattern-image: radial-gradient(circle at 100% 50%, transparent 20%, rgba(0, 0, 0, 0.1) 21%, rgba(0, 0, 0, 0.1) 34%, transparent 35%, transparent),
+        radial-gradient(circle at 0% 50%, transparent 20%, rgba(0, 0, 0, 0.1) 21%, rgba(0, 0, 0, 0.1) 34%, transparent 35%, transparent);
+    --pattern-size: 75px 50px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Zigzag - Light Orange Base */
+.AnimBg10 {
+    background: #fff0e6;
+    --pattern-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%);
+    --pattern-size: 30px 30px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Plus Signs - Light Emerald Base */
+.AnimBg11 {
+    background: #e6fff7;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    --pattern-size: 30px 30px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Diamonds - Light Violet Base */
+.AnimBg12 {
+    background: #f2e6ff;
+    --pattern-image: linear-gradient(45deg, transparent 40%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.1) 60%, transparent 60%);
+    --pattern-size: 30px 30px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Squares Grid - Light Brick Red Base */
+.AnimBg13 {
+    background: #ffe6e6;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    --pattern-size: 35px 35px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Circles Overlap - Light Forest Green Base */
+.AnimBg14 {
+    background: #e6ffe6;
+    --pattern-image: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.1) 40%, transparent 40%);
+    --pattern-size: 50px 50px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Vertical Stripes - Light Navy Base */
+.AnimBg15 {
+    background: #e6f6ff;
+    --pattern-image: repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0, 0, 0, 0.1) 20px, rgba(0, 0, 0, 0.1) 40px);
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Horizontal Stripes - Light Rust Base */
+.AnimBg16 {
+    background: #fff0e6;
+    --pattern-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0, 0, 0, 0.1) 20px, rgba(0, 0, 0, 0.1) 40px);
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Checkerboard - Light Gray Base */
+.AnimBg17 {
+    background: #f0f0f0;
+    --pattern-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
+    --pattern-size: 40px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Polka Dots Large - Light Red Base */
+.AnimBg18 {
+    background: #ffebeb;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 10px, transparent 10px);
+    --pattern-size: 60px 60px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Small Dots Dense - Light Aqua Base */
+.AnimBg19 {
+    background: #e6fffe;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    --pattern-size: 15px 15px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Diagonal Grid - Light Slate Base */
+.AnimBg20 {
+    background: #f0f0f4;
+    --pattern-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px),
+        repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px);
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Bubbles - Light Sky Blue Base */
+.AnimBg21 {
+    background: #e6f7ff;
+    --pattern-image: radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.1) 5%, transparent 5%),
+        radial-gradient(circle at 60% 70%, rgba(0, 0, 0, 0.08) 8%, transparent 8%),
+        radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.09) 6%, transparent 6%),
+        radial-gradient(circle at 30% 80%, rgba(0, 0, 0, 0.1) 7%, transparent 7%);
+    --pattern-size: 80px 80px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Confetti - Light Gold Base */
+.AnimBg22 {
+    background: #fffbe6;
+    --pattern-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 20%, transparent 20%, transparent),
+        linear-gradient(45deg, rgba(255, 100, 100, 0.2) 0%, rgba(255, 100, 100, 0.2) 15%, transparent 15%, transparent),
+        linear-gradient(-45deg, rgba(100, 255, 100, 0.2) 0%, rgba(100, 255, 100, 0.2) 15%, transparent 15%, transparent);
+    --pattern-size: 25px 25px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Snowflakes - Very Light Cyan Base */
+.AnimBg23 {
+    background: #f0f8f9;
+    --pattern-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    --pattern-size: 40px 40px, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Flowers - Light Peach Base */
+.AnimBg24 {
+    background: #fff0e6;
+    --pattern-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 3%, transparent 3%),
+        radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.08) 5%, transparent 5%),
+        radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 0.08) 5%, transparent 5%),
+        radial-gradient(circle at 30% 70%, rgba(0, 0, 0, 0.08) 5%, transparent 5%),
+        radial-gradient(circle at 70% 70%, rgba(0, 0, 0, 0.08) 5%, transparent 5%);
+    --pattern-size: 50px 50px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Leaves - Light Sage Green Base */
+.AnimBg25 {
+    background: #efffef;
+    --pattern-image: radial-gradient(ellipse 15px 25px at 30% 50%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(ellipse 15px 25px at 70% 50%, rgba(0, 0, 0, 0.09) 50%, transparent 50%);
+    --pattern-size: 60px 60px;
+}
+
+/* Music Notes - Light Magenta Base */
+.AnimBg26 {
+    background: #f7e6ff;
+    --pattern-image: radial-gradient(circle at 30% 70%, rgba(0, 0, 0, 0.1) 4%, transparent 4%),
+        radial-gradient(circle at 32% 60%, rgba(0, 0, 0, 0.1) 3%, transparent 3%),
+        linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.1) 60%, transparent 60%);
+    --pattern-size: 50px 50px;
+}
+
+/* Cloud Pattern - Light Grey-Blue Base */
+.AnimBg27 {
+    background: #e6f0f4;
+    --pattern-image: radial-gradient(ellipse 20px 12px at 40% 50%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(ellipse 15px 10px at 60% 50%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(ellipse 18px 11px at 50% 48%, rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 70px 70px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Rain Drops - Light Ocean Blue Base */
+.AnimBg28 {
+    background: #e6f7ff;
+    --pattern-image: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.1) 60%, transparent 60%),
+        radial-gradient(ellipse at 50% 70%, rgba(0, 0, 0, 0.1) 30%, transparent 30%);
+    --pattern-size: 20px 40px, 20px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Lightning Bolts - Light Orange-Yellow Base */
+.AnimBg29 {
+    background: #fffbe6;
+    --pattern-image: linear-gradient(135deg, transparent 30%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.1) 35%, transparent 35%, transparent 45%, rgba(0, 0, 0, 0.1) 45%, rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 40px 60px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Sun Rays - Light Gold Base */
+.AnimBg30 {
+    background: #fffde6;
+    --pattern-image: repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px),
+        repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.08) 5px, rgba(0, 0, 0, 0.08) 10px),
+        repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px),
+        repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 0.08) 5px, rgba(0, 0, 0, 0.08) 10px);
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Moon & Stars - Light Indigo Base */
+.AnimBg31 {
+    background: #e9e9f0;
+    --pattern-image: radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.15) 12%, transparent 12%),
+        radial-gradient(circle at 25% 40%, rgba(0, 0, 0, 0.08) 2%, transparent 2%),
+        radial-gradient(circle at 45% 25%, rgba(0, 0, 0, 0.08) 2%, transparent 2%),
+        radial-gradient(circle at 70% 60%, rgba(0, 0, 0, 0.08) 2%, transparent 2%);
+    --pattern-size: 100px 100px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Arrow Pattern - Light Crimson Base */
+.AnimBg32 {
+    background: #ffe6e8;
+    --pattern-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 30%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 70%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 30%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 70%);
+    --pattern-size: 30px 30px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Brick Pattern - Light Rust Base */
+.AnimBg33 {
+    background: #f7e9e9;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    --pattern-size: 60px 30px, 60px 30px, 30px 15px, 30px 15px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Weave Pattern - Light Olive Base */
+.AnimBg34 {
+    background: #e9f0e6;
+    --pattern-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
+    --pattern-size: 20px 20px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Scallop Pattern - Light Blush Base */
+.AnimBg35 {
+    background: #ffe9e9;
+    --pattern-image: radial-gradient(circle at 100% 100%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px),
+        radial-gradient(circle at 0% 100%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px),
+        radial-gradient(circle at 100% 0%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px),
+        radial-gradient(circle at 0% 0%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px);
+    --pattern-size: 20px 20px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Fish Scale - Light Cyan Base */
+.AnimBg36 {
+    background: #e6f6ff;
+    --pattern-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 30px 15px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Honeycomb - Light Orange Base */
+.AnimBg37 {
+    background: #fffbe6;
+    --pattern-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+        radial-gradient(circle at 0% 50%, rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+        radial-gradient(circle at 100% 50%, rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.1) 15%, transparent 15%);
+    --pattern-size: 40px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+.anim {
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite
+}
+
+/* Circuit Board - Light Khaki Base */
+.AnimBg38 {
+    background: #e9ede5;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(0, 0, 0, 0.1) 3px, transparent 3px);
+    --pattern-size: 30px 30px, 30px 30px, 60px 60px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Maze Pattern - Light Slate Base */
+.AnimBg39 {
+    background: #f0f0f4;
+    --pattern-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 20px 20px, 20px 20px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Leaf Vein - Light Forest Green Base */
+.AnimBg40 {
+    background: #efffef;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    --pattern-size: 30px 30px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Butterfly Wings - Light Fuchsia Base */
+.AnimBg41 {
+    background: #ffecf2;
+    --pattern-image: radial-gradient(ellipse 20px 30px at 40% 50%, rgba(0, 0, 0, 0.1) 40%, transparent 40%),
+        radial-gradient(ellipse 20px 30px at 60% 50%, rgba(0, 0, 0, 0.1) 40%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 3%, transparent 3%);
+    --pattern-size: 80px 80px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+/* Paw Prints - Light Brown Base */
+.AnimBg42 {
+    background: #f0ebe6;
+    --pattern-image: radial-gradient(ellipse 8px 10px at 40% 60%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.1) 3px, transparent 3px),
+        radial-gradient(circle at 50% 25%, rgba(0, 0, 0, 0.1) 3px, transparent 3px),
+        radial-gradient(circle at 50% 35%, rgba(0, 0, 0, 0.1) 3px, transparent 3px);
+    --pattern-size: 40px 40px;
+    animation: pulse-light 3s infinite alternate, move-background 20s linear infinite;
+}
+
+.anim[class*="AnimBg"] {
+    background-image: var(--pattern-image);
+    background-size: var(--pattern-size);
+    /* Resetting default background-position so the animation takes full control */
+    background-position: 0 0;
+}
+
+.pattern[class*="PaternBg"] {
+    background-image: var(--pattern-image);
+    background-size: var(--pattern-size);
+}
+
+
+@keyframes pulse-light {
+    0% {
+        filter: brightness(100%);
+    }
+
+    50% {
+        filter: brightness(105%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+/* 2. Background Position Movement (Moving animation) */
+@keyframes move-background {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100px 100px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/* Paw Prints - Light Brown Base */
+.bg42 {
+    background: #f0ebe6;
+    /* Light Brown */
+    --pattern-image: radial-gradient(ellipse 8px 10px at 40% 60%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.1) 3px, transparent 3px),
+        radial-gradient(circle at 50% 25%, rgba(0, 0, 0, 0.1) 3px, transparent 3px),
+        radial-gradient(circle at 50% 35%, rgba(0, 0, 0, 0.1) 3px, transparent 3px);
+    --pattern-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+
+
+/* Smiley Pattern - Pastel Pink Base */
+.PaternBg1 {
+    background: #ffecf0;
+    --pattern-image: radial-gradient(circle at 30% 40%, rgba(0, 0, 0, 0.1) 8%, transparent 8%),
+        radial-gradient(circle at 70% 40%, rgba(0, 0, 0, 0.1) 8%, transparent 8%),
+        radial-gradient(circle at 50% 55%, rgba(0, 0, 0, 0.1) 12%, transparent 12%);
+    --pattern-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+}
+
+/* Stars Pattern - Light Blue Base */
+.PaternBg2 {
+    background: #e6f0ff;
+    --pattern-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.1) 3%, transparent 3%),
+        radial-gradient(circle at 70% 50%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 50% 70%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 1%, transparent 1%);
+    --pattern-size: 60px 60px;
+}
+
+/* Circles Pattern - Light Mint Base */
+.PaternBg3 {
+    background: #e6fff1;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 15%, transparent 15%);
+    --pattern-size: 40px 40px;
+}
+
+/* Dots Grid - Light Lavender Base */
+.PaternBg4 {
+    background: #f5e6ff;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    --pattern-size: 25px 25px;
+}
+
+/* Diagonal Lines - Light Coral Base */
+.PaternBg5 {
+    background: #ffe6e6;
+    --pattern-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(0, 0, 0, 0.08) 10px,
+            rgba(0, 0, 0, 0.08) 20px);
+}
+
+/* Cross Hatch - Light Gray Base */
+.PaternBg6 {
+    background: #eee;
+    --pattern-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px),
+        repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px);
+}
+
+/* Triangles - Light Teal Base */
+.PaternBg7 {
+    background: #e6fafa;
+    --pattern-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%);
+    --pattern-size: 40px 40px;
+}
+
+/* Hexagons - Light Yellow Base */
+.PaternBg8 {
+    background: #fff8e6;
+    --pattern-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 20%, transparent 20%),
+        radial-gradient(circle at 0% 100%, rgba(0, 0, 0, 0.1) 20%, transparent 20%),
+        radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.1) 20%, transparent 20%);
+    --pattern-size: 50px 43px;
+}
+
+/* Waves - Light Cerulean Base */
+.PaternBg9 {
+    background: #e6f6ff;
+    --pattern-image: radial-gradient(circle at 100% 50%, transparent 20%, rgba(0, 0, 0, 0.1) 21%, rgba(0, 0, 0, 0.1) 34%, transparent 35%, transparent),
+        radial-gradient(circle at 0% 50%, transparent 20%, rgba(0, 0, 0, 0.1) 21%, rgba(0, 0, 0, 0.1) 34%, transparent 35%, transparent);
+    --pattern-size: 75px 50px;
+}
+
+/* Zigzag - Light Orange Base */
+.PaternBg10 {
+    background: #fff0e6;
+    --pattern-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%);
+    --pattern-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
+
+/* Plus Signs - Light Emerald Base */
+.PaternBg11 {
+    background: #e6fff7;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    --pattern-size: 30px 30px;
+}
+
+/* Diamonds - Light Violet Base */
+.PaternBg12 {
+    background: #f2e6ff;
+    --pattern-image: linear-gradient(45deg, transparent 40%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.1) 60%, transparent 60%);
+    --pattern-size: 30px 30px;
+}
+
+/* Squares Grid - Light Brick Red Base */
+.PaternBg13 {
+    background: #ffe6e6;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    --pattern-size: 35px 35px;
+}
+
+/* Circles Overlap - Light Forest Green Base */
+.PaternBg14 {
+    background: #e6ffe6;
+    --pattern-image: radial-gradient(circle, transparent 20%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.1) 40%, transparent 40%);
+    --pattern-size: 50px 50px;
+}
+
+/* Vertical Stripes - Light Navy Base */
+.PaternBg15 {
+    background: #e6f6ff;
+    --pattern-image: repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0, 0, 0, 0.1) 20px, rgba(0, 0, 0, 0.1) 40px);
+}
+
+/* Horizontal Stripes - Light Rust Base */
+.PaternBg16 {
+    background: #fff0e6;
+    --pattern-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0, 0, 0, 0.1) 20px, rgba(0, 0, 0, 0.1) 40px);
+}
+
+/* Checkerboard - Light Gray Base */
+.PaternBg17 {
+    background: #f0f0f0;
+    --pattern-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
+    --pattern-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+/* Polka Dots Large - Light Red Base */
+.PaternBg18 {
+    background: #ffebeb;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 10px, transparent 10px);
+    --pattern-size: 60px 60px;
+}
+
+/* Small Dots Dense - Light Aqua Base */
+.PaternBg19 {
+    background: #e6fffe;
+    --pattern-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    --pattern-size: 15px 15px;
+}
+
+/* Diagonal Grid - Light Slate Base */
+.PaternBg20 {
+    background: #f0f0f4;
+    --pattern-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px),
+        repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(0, 0, 0, 0.08) 20px, rgba(0, 0, 0, 0.08) 21px);
+}
+
+/* Bubbles - Light Sky Blue Base */
+.PaternBg21 {
+    background: #e6f7ff;
+    --pattern-image: radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.1) 5%, transparent 5%),
+        radial-gradient(circle at 60% 70%, rgba(0, 0, 0, 0.08) 8%, transparent 8%),
+        radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.09) 6%, transparent 6%),
+        radial-gradient(circle at 30% 80%, rgba(0, 0, 0, 0.1) 7%, transparent 7%);
+    --pattern-size: 80px 80px;
+}
+
+/* Confetti - Light Gold Base */
+.PaternBg22 {
+    background: #fffbe6;
+    --pattern-image: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 20%, transparent 20%, transparent),
+        linear-gradient(45deg, rgba(255, 100, 100, 0.2) 0%, rgba(255, 100, 100, 0.2) 15%, transparent 15%, transparent),
+        linear-gradient(-45deg, rgba(100, 255, 100, 0.2) 0%, rgba(100, 255, 100, 0.2) 15%, transparent 15%, transparent);
+    --pattern-size: 25px 25px;
+    background-position: 0 0, 10px 10px, 20px 5px;
+}
+
+/* Snowflakes - Very Light Cyan Base */
+.PaternBg23 {
+    background: #f0f8f9;
+    --pattern-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 2%, transparent 2%),
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    --pattern-size: 40px 40px, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+    background-position: 20px 20px, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+}
+
+/* Flowers - Light Peach Base */
+.PaternBg24 {
+    background: #fff0e6;
+    --pattern-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.1) 3%, transparent 3%),
+        radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.08) 5%, transparent 5%),
+        radial-gradient(circle at 70% 30%, rgba(0, 0, 0, 0.08) 5%, transparent 5%),
+        radial-gradient(circle at 30% 70%, rgba(0, 0, 0, 0.08) 5%, transparent 5%),
+        radial-gradient(circle at 70% 70%, rgba(0, 0, 0, 0.08) 5%, transparent 5%);
+    --pattern-size: 50px 50px;
+}
+
+/* Leaves - Light Sage Green Base */
+.PaternBg25 {
+    background: #efffef;
+    --pattern-image: radial-gradient(ellipse 15px 25px at 30% 50%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(ellipse 15px 25px at 70% 50%, rgba(0, 0, 0, 0.09) 50%, transparent 50%);
+    --pattern-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+/* Music Notes - Light Magenta Base */
+.PaternBg26 {
+    background: #f7e6ff;
+    --pattern-image: radial-gradient(circle at 30% 70%, rgba(0, 0, 0, 0.1) 4%, transparent 4%),
+        radial-gradient(circle at 32% 60%, rgba(0, 0, 0, 0.1) 3%, transparent 3%),
+        linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.1) 60%, transparent 60%);
+    --pattern-size: 50px 50px;
+}
+
+/* Cloud Pattern - Light Grey-Blue Base */
+.PaternBg27 {
+    background: #e6f0f4;
+    --pattern-image: radial-gradient(ellipse 20px 12px at 40% 50%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(ellipse 15px 10px at 60% 50%, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        radial-gradient(ellipse 18px 11px at 50% 48%, rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 70px 70px;
+}
+
+/* Rain Drops - Light Ocean Blue Base */
+.PaternBg28 {
+    background: #e6f7ff;
+    --pattern-image: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.1) 60%, transparent 60%),
+        radial-gradient(ellipse at 50% 70%, rgba(0, 0, 0, 0.1) 30%, transparent 30%);
+    --pattern-size: 20px 40px, 20px 40px;
+    background-position: 0 0, 10px 20px;
+}
+
+/* Lightning Bolts - Light Orange-Yellow Base */
+.PaternBg29 {
+    background: #fffbe6;
+    --pattern-image: linear-gradient(135deg, transparent 30%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.1) 35%, transparent 35%, transparent 45%, rgba(0, 0, 0, 0.1) 45%, rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 40px 60px;
+}
+
+/* Sun Rays - Light Gold Base */
+.PaternBg30 {
+    background: #fffde6;
+    --pattern-image: repeating-linear-gradient(0deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px),
+        repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.08) 5px, rgba(0, 0, 0, 0.08) 10px),
+        repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px),
+        repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(0, 0, 0, 0.08) 5px, rgba(0, 0, 0, 0.08) 10px);
+}
+
+/* Moon & Stars - Light Indigo Base */
+.PaternBg31 {
+    background: #e9e9f0;
+    --pattern-image: radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.15) 12%, transparent 12%),
+        radial-gradient(circle at 25% 40%, rgba(0, 0, 0, 0.08) 2%, transparent 2%),
+        radial-gradient(circle at 45% 25%, rgba(0, 0, 0, 0.08) 2%, transparent 2%),
+        radial-gradient(circle at 70% 60%, rgba(0, 0, 0, 0.08) 2%, transparent 2%);
+    --pattern-size: 100px 100px;
+}
+
+/* Arrow Pattern - Light Crimson Base */
+.PaternBg32 {
+    background: #ffe6e8;
+    --pattern-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 30%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 70%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 30%, transparent 30%, transparent 70%, rgba(0, 0, 0, 0.1) 70%);
+    --pattern-size: 30px 30px;
+}
+
+/* Brick Pattern - Light Rust Base */
+.PaternBg33 {
+    background: #f7e9e9;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    --pattern-size: 60px 30px, 60px 30px, 30px 15px, 30px 15px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* Weave Pattern - Light Olive Base */
+.PaternBg34 {
+    background: #e9f0e6;
+    --pattern-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
+    --pattern-size: 20px 20px;
+}
+
+/* Scallop Pattern - Light Blush Base */
+.PaternBg35 {
+    background: #ffe9e9;
+    --pattern-image: radial-gradient(circle at 100% 100%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px),
+        radial-gradient(circle at 0% 100%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px),
+        radial-gradient(circle at 100% 0%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px),
+        radial-gradient(circle at 0% 0%, transparent 9px, rgba(0, 0, 0, 0.1) 9px, rgba(0, 0, 0, 0.1) 10px, transparent 10px);
+    --pattern-size: 20px 20px;
+}
+
+/* Fish Scale - Light Cyan Base */
+.PaternBg36 {
+    background: #e6f6ff;
+    --pattern-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 30px 15px;
+    background-position: 0 0, 15px 15px;
+}
+
+/* Honeycomb - Light Orange Base */
+.PaternBg37 {
+    background: #fffbe6;
+    --pattern-image: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+        radial-gradient(circle at 0% 50%, rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+        radial-gradient(circle at 100% 50%, rgba(0, 0, 0, 0.1) 15%, transparent 15%),
+        radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.1) 15%, transparent 15%);
+    --pattern-size: 40px 40px;
+}
+
+/* Circuit Board - Light Khaki Base */
+.PaternBg38 {
+    background: #e9ede5;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(0, 0, 0, 0.1) 3px, transparent 3px);
+    --pattern-size: 30px 30px, 30px 30px, 60px 60px;
+}
+
+/* Maze Pattern - Light Slate Base */
+.PaternBg39 {
+    background: #f0f0f4;
+    --pattern-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 50%, transparent 50%),
+        linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 50%);
+    --pattern-size: 20px 20px, 20px 20px;
+}
+
+/* Leaf Vein - Light Forest Green Base */
+.PaternBg40 {
+    background: #efffef;
+    --pattern-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    --pattern-size: 30px 30px;
+}
+
+
+
+
+
+.gradient-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.gradient-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.gradient-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.gradient-4 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+}
+
+.gradient-5 {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: white;
+}
+
+.gradient-6 {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: white;
+}
+
+.gradient-7 {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+}
+
+.gradient-8 {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    color: white;
+}
+
+.gradient-9 {
+    background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+    color: white;
+}
+
+.gradient-10 {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+}
+
+.gradient-11 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.gradient-12 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.gradient-13 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.gradient-14 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+}
+
+.gradient-15 {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: white;
+}
+
+.gradient-16 {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: white;
+}
+
+.gradient-17 {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+}
+
+.gradient-18 {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    color: white;
+}
+
+.gradient-19 {
+    background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+    color: white;
+}
+
+.gradient-20 {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+}
+
+.gradient-21 {
+    background: linear-gradient(10deg, #ffffff 0%, #000000 100%) !important;
+    color: rgb(255, 255, 255);
+}
+
+.gradient-22 {
+    background: linear-gradient(135deg, #a5b4f5 0%, #b8a0d4 100%);
+    color: white;
+}
+
+.gradient-23 {
+    background: linear-gradient(135deg, #f8c9fd 0%, #faa7b5 100%);
+    color: white;
+}
+
+.gradient-24 {
+    background: linear-gradient(135deg, #a7d6ff 0%, #80f9ff 100%);
+    color: white;
+}
+
+.gradient-25 {
+    background: linear-gradient(135deg, #fcb8cd 0%, #fef0a0 100%);
+    color: white;
+}
+
+.gradient-26 {
+    background: linear-gradient(135deg, #d4f6f5 0%, #feebf1 100%);
+    color: white;
+}
+
+.gradient-27 {
+    background: linear-gradient(135deg, #fff6e9 0%, #fddbcf 100%);
+    color: white;
+}
+
+.gradient-28 {
+    background: linear-gradient(135deg, #ffcdcf 0%, #fee7f7 100%);
+    color: white;
+}
+
+.gradient-29 {
+    background: linear-gradient(135deg, #d0c6e8 0%, #fde1f5 100%);
+    color: white;
+}
+
+.gradient-30 {
+    background: linear-gradient(135deg, #fde8e2 0%, #ffe8ff 100%);
+    color: white;
+}
+
+.gradient-31 {
+    background: linear-gradient(135deg, #badcff 0%, #84c2f1 100%);
+    color: white;
+}
+
+.gradient-32 {
+    background: linear-gradient(135deg, #a5b4f5 0%, #b8a0d4 100%);
+    color: white;
+}
+
+.gradient-33 {
+    background: linear-gradient(135deg, #f8c9fd 0%, #faa7b5 100%);
+    color: white;
+}
+
+.gradient-34 {
+    background: linear-gradient(135deg, #a7d6ff 0%, #80f9ff 100%);
+    color: white;
+}
+
+.gradient-35 {
+    background: linear-gradient(135deg, #fcb8cd 0%, #fef0a0 100%);
+    color: white;
+}
+
+.gradient-36 {
+    background: linear-gradient(135deg, #d4f6f5 0%, #feebf1 100%);
+    color: white;
+}
+
+.gradient-37 {
+    background: linear-gradient(135deg, #fff6e9 0%, #fddbcf 100%);
+    color: white;
+}
+
+.gradient-38 {
+    background: linear-gradient(135deg, #ffcdcf 0%, #fee7f7 100%);
+    color: white;
+}
+
+.gradient-39 {
+    background: linear-gradient(135deg, #d0c6e8 0%, #fde1f5 100%);
+    color: white;
+}
+
+.gradient-40 {
+    background: linear-gradient(135deg, #fde8e2 0%, #ffe8ff 100%);
+    color: white;
+}
+
+.gradient-41 {
+    background: linear-gradient(135deg, #badcff 0%, #84c2f1 100%);
+    color: white;
+}
+
+.gradient-42 {
+    background: linear-gradient(10deg, #ffffff 0%, #cccccc 100%) !important;
+    color: rgb(255, 255, 255);
+}
+
+
+.ChatTheme1 {
+  background-color: #ffcccc;
+  color: black;
+}
+
+.ChatTheme2 {
+  background-color: #c7ffc4;
+  color: black;
+}
+
+.ChatTheme3 {
+  background-color: #c4d4ff;
+  color: black;
+}
+
+.ChatTheme4 {
+  background-color: #ffc4eb;
+  color: black;
+}
+
+.ChatTheme5 {
+  background-color: #c4e5ff;
+  color: black;
+}
+
+.ChatTheme6 {
+  background-color: #ffe4c4;
+  color: black;
+}
+
+.ChatTheme7 {
+  background-color: #eac4ff;
+  color: black;
+}
+
+.ChatTheme8 {
+  background-color: #e8fee5;
+  color: black;
+}
+
+.ChatWhatsappTheme {
+  background-color: #c7ffc4;
+  color: black;
+}
+.ChatDefaultTheme {
+  background-color: #c7ffc4;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

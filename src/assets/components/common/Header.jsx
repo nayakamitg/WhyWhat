@@ -1,199 +1,480 @@
+import {
+  ArrowLeft,
+  Bell,
+  Compass,
+  Languages,
+  Mic,
+  Minus,
+  Moon,
+  Plus,
+  Search,
+  SendHorizontal,
+  Settings,
+  Square,
+  Sun,
+  X,
+} from "lucide-react";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 
-import { ArrowLeft, Bell, Compass, Languages, Mic, Moon, Search, Sun } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
-import { Container, Dropdown } from 'react-bootstrap';
-import { Link } from 'react-router'
+import React, { useContext, useEffect, useMemo, useState } from "react";
+import { Container, Dropdown, Form, Offcanvas } from "react-bootstrap";
+import { Link, useNavigate } from "react-router";
+import SearchContext from "../../services/SearchContext";
+import toast from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPosts } from "../../services/slices/postSlice";
+import { delay } from "motion";
+import { useTranslation } from "react-i18next";
+import ThemeContext from "../../services/ThemeContext";
+import { zoomLevels } from "../../../App";
 
-const Header = ({mode,setMode}) => {
 
-    
-    const [searchQuery, setSearchQuery] = useState('');
+const debounce = (fn, delay) => {
+  let timerId;
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => fn(...args), delay);
+  };
+};
+
+const Header = ({ mode, setMode }) => {
+  const [language, setLanguage] = useState(
+    localStorage.getItem("i18nextLng") || "en"
+  );
+  const navigate=useNavigate()
+  const { search, setSearch, nicheId } = useContext(SearchContext);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [isSearch,setIsSearch] = useState(false)
- const handleSearch = () => {
-    if (searchQuery.trim()) {
-      console.log('Searching for:', searchQuery);
+  const [isSearch, setIsSearch] = useState(false);
+  const [trySearch, setTrySearch] = useState("");
+  const [startListen, setStartListen] = useState(false);
+ const { t, i18n } = useTranslation();
+  const { posts, loading, error } = useSelector((state) => state.post);
+const {zoom,setZoom}=useContext(ThemeContext);
+  const dispatch = useDispatch();
+  const { transcript, browserSupportsSpeechRecognition, listening } =
+    useSpeechRecognition();
+  const [micPermissionGranted, setMicPermissionGranted] = useState(false);
+
+  const handleSearch = () => {
+    if (search.trim()) {
     }
   };
 
-   useEffect(() => {
+  useEffect(() => {
+    dispatch(
+      fetchPosts({
+        search,
+        nicheId,
+      })
+    );
+  }, [dispatch]);
+
+  useEffect(() => {
     document.body.className =
       mode === "light" ? "bg-light text-dark" : "bg-dark text-light";
   }, [mode]);
 
-  useEffect(
-    ()=>{
-
-  let newMode= localStorage.getItem("mode")
-  if(newMode){
-    setMode(newMode)
-  }
-    },[])
+  useEffect(() => {
+    let newMode = localStorage.getItem("mode");
+    if (newMode) {
+      setMode(newMode);
+    }
+  }, []);
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSearch();
+    if (e.key === "Enter") {
+      setSearch(trySearch);
+      navigate("/")
     }
   };
 
+  useEffect(() => {
+    setSearch(transcript);
+  }, [transcript]);
+
   const handleBack = () => {
-    console.log('Going back');
+    console.log("Going back");
   };
 
-  const handleMode=()=>{
-    if(mode=="dark")
-    {
-      localStorage.setItem("mode","light")
-    setMode("light")
+  const handleLanguage = (lang) => {
+    localStorage.setItem("language", lang);
+    setLanguage(lang);
+  };
+
+  const handleMode = () => {
+    if (mode == "dark") {
+      localStorage.setItem("mode", "light");
+      setMode("light");
+    } else {
+      localStorage.setItem("mode", "dark");
+      setMode("dark");
+    }
+  };
+
+ const handleIncrease = () => {
+  const currentIndex = zoomLevels.findIndex((z) => z === zoom);
+  if (currentIndex < zoomLevels.length - 1) {
+    const newzoom=zoomLevels[currentIndex + 1]
+    setZoom(newzoom);
+    localStorage.setItem("zoom",newzoom);
   }
-  else{
-    localStorage.setItem("mode","dark")
-    setMode("dark")
+};
+
+const handleDecrease = () => {
+  const currentIndex = zoomLevels.findIndex((z) => z === zoom);
+  if (currentIndex > 0) {
+    const newzoom=zoomLevels[currentIndex - 1]
+    setZoom(newzoom);
+    localStorage.setItem("zoom",newzoom);
   }
-}
+};
+
+
+  useEffect(() => {
+    // Check if running in secure context
+    if (!window.isSecureContext) {
+      console.error("Speech recognition requires HTTPS");
+    }
+
+    // Check browser support
+    if (!browserSupportsSpeechRecognition) {
+      console.error("Browser doesn't support speech recognition");
+    }
+
+    // Log for debugging
+    console.log("Secure context:", window.isSecureContext);
+    console.log("Browser supports speech:", browserSupportsSpeechRecognition);
+  }, [browserSupportsSpeechRecognition]);
+
+  const checkMicrophonePermission = async () => {
+    try {
+      // Request microphone access
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+      // Stop all tracks immediately - we just needed to check permission
+      stream.getTracks().forEach((track) => track.stop());
+
+      setMicPermissionGranted(true);
+      return true;
+    } catch (error) {
+      console.error("Microphone permission error:", error);
+
+      if (
+        error.name === "NotAllowedError" ||
+        error.name === "PermissionDeniedError"
+      ) {
+        toast.error(
+          "Microphone access denied. Please allow microphone access in your browser settings."
+        );
+      } else if (error.name === "NotFoundError") {
+        toast.error("No microphone found. Please connect a microphone.");
+      } else {
+        toast.error("Could not access microphone: " + error.message);
+      }
+
+      return false;
+    }
+  };
+
+  const start = async () => {
+    // Check if browser supports speech recognition
+    if (!browserSupportsSpeechRecognition) {
+      console.error("Your browser doesn't support speech recognition");
+      return;
+    }
+
+    // Check secure context
+    if (!window.isSecureContext) {
+      console.error("Voice input requires HTTPS connection");
+      return;
+    }
+
+    // Check and request microphone permission
+    const hasPermission = await checkMicrophonePermission();
+    if (!hasPermission) {
+      return;
+    }
+
+    try {
+      // Start listening with error handling
+      SpeechRecognition.startListening({
+        language: localStorage.getItem("language") || "En",
+      });
+      setStartListen(true);
+    } catch (error) {
+      console.error("Speech recognition error:", error);
+      toast.error("Failed to start voice recognition: " + error.message);
+    }
+  };
+
+  const stop = () => {
+    try {
+      SpeechRecognition.stopListening();
+      setStartListen(false);
+    } catch (error) {
+      console.error("Error stopping speech recognition:", error);
+    }
+  };
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const toggleShow = () => setShow((s) => !s);
+
+  useEffect(() => {
+    const handleSpeechError = (event) => {
+      console.error("Speech recognition error:", event);
+      toast.error(
+        "Speech recognition error: " + (event.error || "Unknown error")
+      );
+      setStartListen(false);
+    };
+
+    if (typeof window !== "undefined" && window.SpeechRecognition) {
+      window.addEventListener("speechrecognitionerror", handleSpeechError);
+      return () => {
+        window.removeEventListener("speechrecognitionerror", handleSpeechError);
+      };
+    }
+  }, []);
 
   return (
     <>
-
-
-      <nav className={`container-fluid border-bottom p-0 border-2 d-flex justify-content-between align-item-center mainHeader ${ mode === "light" ? "bg-light text-dark" : "bg-dark text-light"}`}>
-
-  {isSearch? <header className="youtube-header">
-        <div className="header-container d-flex align-items-center">
-          {/* Back Button */}
-          <button 
-            className="back-btn1" 
-            onClick={handleBack}
-            title="Go back"
+      <nav
+        className={`container-fluid p-0 d-flex justify-content-between align-item-center mainHeader ${
+          mode === "light" ? "bg-light text-dark" : "bg-dark text-light"
+        }`}
+      >
+        {isSearch ? (
+          <header
+            className={`youtube-header ${
+              mode == "dark" ? "bg-dark text-light" : "text-dark bg-light"
+            } `}
           >
-            <ArrowLeft size={24} onClick={()=>setIsSearch(false)} />
-          </button>
-
-          {/* Search Container */}
-          <div className="search-container">
-            <div className="search-wrapper">
-              <div className="search-input-wrapper">
-                <input
-                  type="text"
-                  className="search-input"
-                  placeholder="Search"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  onFocus={() => setIsSearchFocused(true)}
-                  onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+            <div className="header-container d-flex align-items-center">
+              {/* Back Button */}
+              <button
+                className="back-btn1"
+                onClick={handleBack}
+                title="Go back"
+              >
+                <ArrowLeft
+                  size={24}
+                  color={mode == "light" ? "black" : "white"}
+                  onClick={() => {
+                    setIsSearch(false);
+                    stop();
+                  }}
                 />
-                <Search size={20} className="search-icon" />
-              </div>
-              
-              {/* Search Suggestions */}
-              {isSearchFocused && (
-                <div className="search-suggestions">
-                  <button 
-                    className="suggestion-item"
-                    onClick={() => {
-                      setSearchQuery('how to cook pasta');
-                      setIsSearchFocused(false);
-                    }}
-                  >
-                    <Search size={16} className="suggestion-icon" />
-                    <span>how to cook pasta</span>
-                  </button>
-                  <button 
-                    className="suggestion-item"
-                    onClick={() => {
-                      setSearchQuery('youtube shorts tutorial');
-                      setIsSearchFocused(false);
-                    }}
-                  >
-                    <Search size={16} className="suggestion-icon" />
-                    <span>youtube shorts tutorial</span>
-                  </button>
-                  <button 
-                    className="suggestion-item"
-                    onClick={() => {
-                      setSearchQuery('travel vlog ideas');
-                      setIsSearchFocused(false);
-                    }}
-                  >
-                    <Search size={16} className="suggestion-icon" />
-                    <span>travel vlog ideas</span>
-                  </button>
-                  <button 
-                    className="suggestion-item"
-                    onClick={() => {
-                      setSearchQuery('react javascript tutorial');
-                      setIsSearchFocused(false);
-                    }}
-                  >
+              </button>
 
-                    <Search size={16} className="suggestion-icon" />
-                    <span>react javascript tutorial</span>
-                  </button>
-                  <button 
-                    className="suggestion-item"
-                    onClick={() => {
-                      setSearchQuery('cooking recipes easy');
-                      setIsSearchFocused(false);
-                    }}
-                  >
-                    <Search size={16} className="suggestion-icon" />
-                    <span>cooking recipes easy</span>
-                  </button>
+              {/* Search Container */}
+              <div
+                className={`search-container ${
+                  mode == "dark" ? "text-light bg-dark" : "text-dark bg-light"
+                }`}
+              >
+                <div className="search-wrapper">
+                  <div className="search-input-wrapper">
+                    <input
+                      type="search"
+                      className={`search-input ${
+                        mode == "dark" ? "text-light" : "text-dark"
+                      }`}
+                      placeholder={t("search")}
+                      value={trySearch}
+                      onChange={(e) => setTrySearch(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      onFocus={() => setIsSearchFocused(true)}
+                      onBlur={() =>
+                        setTimeout(() => setIsSearchFocused(false), 200)
+                      }
+                    />
+                    <Search size={20} className="search-icon" />
+                      {trySearch.trim() !==""&& <X size={20} className="cross-icon" onClick={()=>{setTrySearch("");setSearch("")}} style={{backgroundColor:"lightgrey",borderRadius:"50%",padding:"3px",position:"absolute",right:"10px"}}/>}
+                  </div>
+
+                  {/* Search Suggestions */}
+                  {isSearchFocused && (
+                    <div
+                      className={`search-suggestions ${
+                        mode == "dark"
+                          ? "text-light bg-dark "
+                          : "text-dark bg-light"
+                      }`}
+                    >
+                      {posts
+                        .filter((post) =>
+                          post.title
+                            .toLowerCase()
+                            .includes(trySearch.toLowerCase())
+                        )
+                        .map((post) => (
+                          <button
+                            className="suggestion-item"
+                            onClick={() => {
+                              setSearch(post.title);
+                              setTrySearch(post.title);
+                              setIsSearchFocused(false);
+                              navigate("/")
+                            }}
+                          >
+                            <Search size={16} className={`suggestion-icon`} />
+                            <span>{post.title}</span>
+                          </button>
+                        ))}
+                    </div>
+                  )}
                 </div>
+              </div>
+
+              {/* Voice Search Button */}
+              {isSearchFocused ? (
+                <button
+                  className={`mic-btn-search ${
+                    mode == "dark" ? "text-white" : "text-dark"
+                  }`}
+                  title="Search with your voice"
+                  onClick={() => {
+                    setSearch(trySearch);
+                    navigate("/")
+                  }}
+                >
+                  <SendHorizontal size={20} />
+                </button>
+              ) : !listening ? (
+                <button
+                  className={`mic-btn-search ${
+                    mode == "dark" ? "text-white" : "text-dark"
+                  }`}
+                  title="Search with your voice"
+                  onClick={() => start()}
+                >
+                  <Mic size={20} />
+                </button>
+              ) : (
+                <button
+                  className={`mic-btn-search-active ${
+                    mode == "dark" ? "text-white" : "text-dark"
+                  }`}
+                  title="Search with your voice"
+                  onClick={() => stop()}
+                >
+                  <Square size={20} />
+                </button>
               )}
             </div>
-          </div>
+          </header>
+        ) : (
+          <>
+            <Link to="/">
+              <img
+                className="img my-3 mx-4"
+                loading="lazy"
+                width={"90px"}
+                src={mode == "light" ? "/logo.png" : "/logo-dark.png"}
+              />
+            </Link>
+            <div className="pt-2 mx-3 d-flex">
+              <Search
+                className="mx-2 mt-2"
+                size={22}
+                onClick={() => setIsSearch(true)}
+              />
+              <div className="notification me-2" onClick={()=>navigate("/notification")}>
+                <Bell className="ball mx-2 mt-2" size={22} />
+                <span className="NotificationCount">2</span>
+              </div>
 
-          {/* Voice Search Button */}
-          <button 
-            className="mic-btn" 
-            title="Search with your voice"
-            onClick={() => console.log('Voice search activated')}
-          >
-            <Mic size={20} />
-          </button>
-        </div>
-      </header>:
+           
 
-     <><Link to="/">
-      <img className='img my-3 mx-4' loading='lazy' width={"90px"} src='/4.png' />
-      </Link>
-        <div className="pt-2 mx-3 d-flex">
-          <Search className='mx-2 mt-2' size={22} onClick={()=>setIsSearch(true)}/>
-            <div className="notification">
-          <Bell className='ball mx-2 mt-2' size={22}/>
-          <span className='NotificationCount'>2</span>
-          </div>
-    
-<span>
-<Dropdown>
-  <Dropdown.Toggle as="button" className="border-0 bg-transparent">
-   <Languages className='mx-2 mt-2' color={mode==="light"?"black":"white"} size={22}/>
-  </Dropdown.Toggle>
-  <Dropdown.Menu className='position-absolute language'>
-    <Dropdown.Item>हिन्दी</Dropdown.Item>
-    <Dropdown.Item>English</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
-</span>
+              <div className="mode">
+                <Settings style={{ marginTop: "5px" }} onClick={toggleShow} />
+              </div>
+            </div>
+          </>
+        )}
 
-<div className="mode" onClick={()=>handleMode()}>
- {mode==="dark"?<Moon style={{marginTop:"8px"}}/>:
-  <Sun style={{marginTop:"8px"}}/>}
-</div>
+        <Offcanvas show={show} onHide={handleClose} className={`setting-header-offcanvas ${mode=="dark"?"bg-dark text-light":""}`} placement="bottom">
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Settings</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className="theme d-flex w-100 justify-content-between">
+               <div className="item py-3">
+              {" "}
+             
+              {t("theme")}
+            </div>
+              <Form className="d-flex align-items-center py-3">
+                <label htmlFor="" className="px-2">
+                  Dark
+                </label>
+                <Form.Check
+                  type="switch"
+                  id="custom-switch"
+                  checked={mode == "dark"}
+                  onClick={handleMode}
+                  style={{fontSize:"22px"}}
+                />
+              </Form>
+            </div>
 
-
-          
-        </div>
-        </>  
-       }
-
+            <div className="theme d-flex w-100 justify-content-between">
+               <div className="item py-3">
+              {" "}
+              
+              {t("language")}
+            </div>
+              <Dropdown  className={`py-3 ${
+                          mode === "light" ? "bg-white text-dark" : "bg-dark text-white"
+                        }`}>
+                        <Dropdown.Toggle as="button" className="border-0 bg-transparent">
+                          <span
+                            className=" px-2"
+                            style={{
+                              width: "50px",
+                              color: mode === "light" ? "black" : "white",
+                            }}
+                          >
+                            {language=="en"?"English":"हिन्दी"}
+                          </span>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu className="position-absolute language">
+                          <Dropdown.Item
+                            onClick={() => {
+                              setLanguage("hi");
+                              i18n.changeLanguage('hi')
+                            }}
+                          >
+                            हिन्दी
+                          </Dropdown.Item>
+                          <Dropdown.Item
+                            onClick={() => {
+                              setLanguage("en");
+                              i18n.changeLanguage('en')
+                            }}
+                          >
+                            English
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+            </div>
+                      <div className="mt-3 ps-1 d-flex justify-content-between">
+                            <div>Zoom</div>
+                            <div className="zoom d-flex gap-3">
+                            <Minus size={27} className="rounded-5 p-1" style={{backgroundColor:"lightgray"}} onClick={handleDecrease}/>
+                            <div className="ZoomNumber">{zoom}%</div>
+                            <Plus size={27} className="rounded-5 p-1" style={{backgroundColor:"lightgray"}} onClick={handleIncrease}/>
+                            </div>
+                      </div>
+          </Offcanvas.Body>
+        </Offcanvas>
       </nav>
 
-      
-
-     <style>{`
+      <style>{`
         .youtube-header {
           background: #f8f9fa;
           height: 56px;
@@ -229,14 +510,15 @@ const Header = ({mode,setMode}) => {
 
         .search-container {
           flex-grow: 1;
-          max-width: 600px;
           margin: 0 16px;
           position: relative;
+         
         }
 
         .search-wrapper {
           position: relative;
           width: 100%;
+           
         }
 
         .search-input-wrapper {
@@ -255,11 +537,12 @@ const Header = ({mode,setMode}) => {
           background: white;
           color: #303030;
           transition: all 0.2s ease;
+          background-color:transparent;
           outline: none;
         }
 
         .search-input:focus {
-          border-color: #1976d2;
+          border-color: #4d96dfcb;
           box-shadow: 0 0 0 1px #1976d2;
         }
 
@@ -278,18 +561,17 @@ const Header = ({mode,setMode}) => {
 
 
         .search-input:focus + .search-icon {
-          color: #1976d2;
+          color: #4d96dfcb;
         }
           .show{
           z-index:1000;
           }
 
-        .mic-btn {
-          background: white;
+        .mic-btn-search {
+          background: transparent;
           border: 1px solid #ccc;
           padding: 8px;
           border-radius: 50%;
-          color: #606060;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -298,18 +580,26 @@ const Header = ({mode,setMode}) => {
           height: 40px;
           margin-left: 8px;
         }
-
-        .mic-btn:hover {
-          background: #f0f0f0;
-          border-color: #999;
-          color: #303030;
+        .mic-btn-search-active {
+          background: white;
+          border: 1px solid #ff0000ff;
+          padding: 8px;
+          border-radius: 50%;
+          color: #ffffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+          min-width: 40px;
+          height: 40px;
+          margin-left: 8px;
+          background-color:#ff0000ff;
         }
 
-        .mic-btn:active {
-          background: #e8f0fe;
-          border-color: #1976d2;
-          color: #1976d2;
-        }
+
+       
+
+       
 
         /* Search suggestions */
         .search-suggestions {
@@ -317,14 +607,14 @@ const Header = ({mode,setMode}) => {
           top: 100%;
           left: 0;
           right: 0;
-          background: white;
           border: 1px solid #e0e0e0;
           border-top: none;
           border-radius: 0 0 8px 8px;
           max-height: 300px;
           overflow-y: auto;
-          z-index: 1001;
+          z-index: 100;
           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          background-color:transparent;
         }
 
         .suggestion-item {
@@ -336,16 +626,14 @@ const Header = ({mode,setMode}) => {
           border: none;
           width: 100%;
           text-align: left;
-          background: white;
         }
 
         .suggestion-item:hover {
-          background: #f8f9fa;
+          background: #93939368;
         }
 
         .suggestion-icon {
           margin-right: 12px;
-          color: #9aa0a6;
         }
 
         /* Mobile Responsive */
@@ -373,10 +661,8 @@ const Header = ({mode,setMode}) => {
           }
         }
       `}</style>
-
-
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

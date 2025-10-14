@@ -6,13 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import Store from './assets/services/store.jsx';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import "./i18n";
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
     <Provider store={Store}>
     <App />
     </Provider>
     </GoogleOAuthProvider>
-  </StrictMode>,
+  // </StrictMode>,
 )
