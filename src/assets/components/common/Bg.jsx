@@ -46,7 +46,7 @@ return (
             <div key={category} className="mb-4">
               <h3 className="bgc-category-title">{category}</h3>
               <div className="bgc-scroll-container">
-                <div className="d-inline-flex gap-3">
+                <div className="d-inline-flex justify-content-center flex-wrap gap-3">
                   {items.map((bg) => (
                     <div key={bg} className="bgc-box-wrapper">
                       <button
@@ -68,7 +68,7 @@ return (
         <div className="mb-5">
           <h2 className="bgc-section-title">Colors</h2>
           <div className="bgc-scroll-container">
-            <div className="d-inline-flex gap-3">
+            <div className="d-inline-flex justify-content-center flex-wrap gap-3">
               {colors.map((color) => (
                 <div key={color} className="bgc-box-wrapper">
                   <button

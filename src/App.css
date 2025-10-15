@@ -1217,7 +1217,7 @@ background-color: #85858503 !important;
 .bgc-scroll-container {
   overflow-x: auto;
   overflow-y: hidden;
-  white-space: nowrap;
+  white-space: wrap;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -1247,6 +1247,7 @@ background-color: #85858503 !important;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
   padding: 0.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
  
