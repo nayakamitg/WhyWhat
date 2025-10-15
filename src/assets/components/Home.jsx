@@ -107,9 +107,7 @@ const BootstrapFeed = ({ mode }) => {
   }, []);
 
   useEffect(() => {
-    console.log("Fetching1")
     if(!posts){
-console.log("Fetching")
     dispatch(
       fetchPosts({
         search,
@@ -229,7 +227,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
           },
         }
       );
-      setFollowing(true);
+      setFollowing((pre)=>!pre);
     } catch (e) {
       console.log("Error to follow", e);
       toast.error(e.message || "Failed to follow");
@@ -316,7 +314,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
                 {post.handle}
               </small>
 
-              <div
+             {userData.user.handle!=post.handle && <div
                 className={`btn ${
                   mode == "light"
                     ? following
@@ -330,7 +328,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
                 onClick={() => handleFollow(post.handle)}
               >
                 {following ? `${t("following")}` : `${t("follow")}`}
-              </div>
+              </div>}
             </div>
             <div
               className="post-description mb-0 d-flex justify-content-between align-items-center fw-bold pt-3"
@@ -630,7 +628,7 @@ const SingleConversation = ({ userData, post, loggedIn }) => {
           },
         }
       );
-      setFollowing(true);
+      setFollowing((pre)=>!pre);
     } catch (e) {
       console.log("Error to follow", e);
       toast.error(e.message || "Failed to follow");
@@ -714,7 +712,7 @@ const SingleConversation = ({ userData, post, loggedIn }) => {
                 {post.handle}
               </small>
 
-              <div
+         { userData.user.handle!=post.handle && <div
                 className={`btn ${
                   mode == "light"
                     ? following
@@ -728,7 +726,7 @@ const SingleConversation = ({ userData, post, loggedIn }) => {
                 onClick={() => handleFollow(post.handle)}
               >
                 {following ? t("following") : t("follow")}
-              </div>
+              </div>}
             </div>
             <div
               className="post-description mb-0 d-flex justify-content-between align-items-center pt-3"

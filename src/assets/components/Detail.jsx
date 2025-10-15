@@ -1,4 +1,6 @@
 import React, {
+  memo,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -109,9 +111,18 @@ const Detail = () => {
   // Extract params
   const postId = parseInt(param.id.split(",")[0]);
   const storyId = parseInt(param.id.split(",")[1]);
+  console.log(allPosts)
 
-  const reorderedPosts = allPosts.filter((newpost)=>newpost.type!="CD");
+ const reorderedPosts = useMemo(() => {
+  return allPosts
+    .filter(post => post.type !== "CD")
+    .map(post => ({
+      ...post,
+      stories: post.stories.filter(story => story.answer!=null)
+    }));
+}, [allPosts]);
 
+console.log("reo",reorderedPosts)
   const initialSlideIndex = reorderedPosts.findIndex((post) => post.id === postId);
   const initialStorySlideIndex = reorderedPosts[
     initialSlideIndex
@@ -894,15 +905,15 @@ const Detail = () => {
             key={`post-${post.id}-${postIndex}`}
             style={{ height: "100vh", position: "relative" }}
           >
-            <div className="QuestionParent" style={{color:post.background || "white"}}>
+            <div className="QuestionParent" style={{color:post.background || "black"}}>
               <ArrowLeft
                 size={40}
                 className="mx-3"
                 onClick={() => navigate(-1)}
-              style={{color:post.background || "white"}}
+              style={{color:post.background || "black"}}
                
               />
-              <p className="Question fw-bold lh-base" style={{color:post.background || "white"}}>{post.description}</p>
+              <p className="Question  lh-base" style={{color:post.background || "black"}}>{post.description}</p>
             </div>
 
             <Swiper
@@ -941,7 +952,7 @@ const Detail = () => {
                     }}
                   >
                     <div
-                      className={`video-area ${story.gradient || ""}`}
+                      className={`video-area ${story.gradient?story.gradient: "black"}`}
                     >
                       <Textfit
                         mode="multi"
@@ -957,7 +968,7 @@ const Detail = () => {
                           userSelect: "none",
                           padding: "0 10px",
                           textIndent: "40px",
-                          color:story?.gradient=="" || "white"
+                          color:story?.gradient?story.gradient: "black"
                         }}
                       >
                         {story?.answer}

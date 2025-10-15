@@ -82,7 +82,7 @@ const QuestionDetail = () => {
           },
         }
       );
-      setFollowing(true);
+      setFollowing((pre)=>!pre);
     } catch (e) {
       console.log("Error to follow", e);
       toast.error(e.message || "Failed to follow");

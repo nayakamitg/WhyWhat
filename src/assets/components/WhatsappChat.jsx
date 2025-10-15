@@ -922,13 +922,16 @@ overflow-x:auto;
              
             </div>
             {sendShow ? (
-              <button className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} onClick={handleSend}>
+              <button disabled={messageInput.trim()==""} className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} onClick={handleSend}>
                 <SendHorizontal className={chatColor!==""?chatColor:singleConversation.theme} color="black" />
               </button>
             ) : (
-              <button className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} >
-                <Mic className={chatColor!==""?chatColor:singleConversation.theme} color="black"/>
+               <button disabled={messageInput.trim()==""} className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} onClick={handleSend}>
+                <SendHorizontal className={chatColor!==""?chatColor:singleConversation.theme} color="black" />
               </button>
+              // <button className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} >
+              //   <Mic className={chatColor!==""?chatColor:singleConversation.theme} color="black"/>
+              // </button>
             )}
           </div>
         </div>

@@ -61,7 +61,7 @@ const NewPost = () => {
   });
 
   const [isTranslating, setIsTranslating] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem("langauge") || "hi-t-i0-und");
+  const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem("langauge") ?"": "hi-t-i0-und");
   const [micPermissionGranted, setMicPermissionGranted] = useState(false);
 
   const { userData, loggedIn } = useSelector((state) => state.user);
@@ -178,6 +178,7 @@ const NewPost = () => {
         nicheId: parseInt(postData.nicheId),
         askTo: parseInt(postData.askTo) || 0,
         language: postData.language || "English",
+        background:"white"
       };
 
       dispatch(
@@ -231,6 +232,12 @@ const NewPost = () => {
   const handleTagSearch = (e) => {
     setSearchInput(e.target.value);
   };
+
+  const handleSelectedLanguage=(lang)=>
+  {
+setSelectedLanguage(lang)
+localStorage.setItem("language",lang)
+  }
 
   const getTextSizeClass = (text) => {
     const length = text.length;
@@ -472,20 +479,20 @@ const NewPost = () => {
                   color: mode === "light" ? "black" : "white",
                 }}
               >
-                {selectedLanguage==("en-IN" || "")?"English":"हिन्दी"}
+                {selectedLanguage==""?"English":"हिन्दी"}
               </span>
             </Dropdown.Toggle>
             <Dropdown.Menu className="position-absolute language">
               <Dropdown.Item
                 onClick={() => {
-                  setSelectedLanguage("hi-t-i0-und");
+                  handleSelectedLanguage("hi-t-i0-und");
                 }}
               >
                 हिन्दी
               </Dropdown.Item>
               <Dropdown.Item
                 onClick={() => {
-                  setSelectedLanguage("");
+                  handleSelectedLanguage("");
                 }}
               >
                 English
