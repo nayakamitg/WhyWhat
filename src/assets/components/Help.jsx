@@ -20,9 +20,7 @@ const Help = () => {
   { q: "faq.q9", a: "faq.a9" },
   { q: "faq.q10", a: "faq.a10" }
 ];
-useEffect(()=>{
-  i18n.changeLanguage("hi");
-},[])
+
 
   return (
     <> 

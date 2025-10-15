@@ -1162,6 +1162,7 @@ background-color: #85858503 !important;
         color: rgb(0, 0, 0) !important;
         box-shadow: 1px 1px 10px 1px rgba(180, 180, 180, 0.747);
         border-radius: 10px;
+        padding: 0 20px;
         }
 
         .accordion-item{
