@@ -314,7 +314,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
                 {post.handle}
               </small>
 
-             {userData.user.handle!=post.handle && <div
+             {loggedIn? (userData?.user?.handle!=post?.handle && <div
                 className={`btn ${
                   mode == "light"
                     ? following
@@ -327,7 +327,21 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
                 style={{ padding: "0", fontSize: "15px" }}
                 onClick={() => handleFollow(post.handle)}
               >
-                {following ? `${t("following")}` : `${t("follow")}`}
+                {following ? t("following") : t("follow")}
+              </div>):<div
+                className={`btn ${
+                  mode == "light"
+                    ? following
+                      ? "btn-outline-dark"
+                      : "btn-dark"
+                    : following
+                    ? "btn-outline-light"
+                    : "btn-light"
+                } px-2`}
+                style={{ padding: "0", fontSize: "15px" }}
+                onClick={() => handleFollow(post.handle)}
+              >
+                {following ? t("following") : t("follow")}
               </div>}
             </div>
             <div
@@ -712,7 +726,21 @@ const SingleConversation = ({ userData, post, loggedIn }) => {
                 {post.handle}
               </small>
 
-         { userData.user.handle!=post.handle && <div
+         {loggedIn? (userData?.user?.handle!=post?.handle && <div
+                className={`btn ${
+                  mode == "light"
+                    ? following
+                      ? "btn-outline-dark"
+                      : "btn-dark"
+                    : following
+                    ? "btn-outline-light"
+                    : "btn-light"
+                } px-2`}
+                style={{ padding: "0", fontSize: "15px" }}
+                onClick={() => handleFollow(post.handle)}
+              >
+                {following ? t("following") : t("follow")}
+              </div>):<div
                 className={`btn ${
                   mode == "light"
                     ? following
