@@ -1177,3 +1177,116 @@ background-color: #85858503 !important;
           border: none;
           box-shadow: none;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* All classess in use for /colors*/
+.bgc-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1.5rem;
+}
+
+.bgc-category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.bgc-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bgc-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bgc-scroll-container::-webkit-scrollbar-track {
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.bgc-scroll-container::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 4px;
+}
+
+.bgc-theme-box {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  border: 3px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+ 
+}
+
+.bgc-theme-box:hover {
+  border-color: #adb5bd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.bgc-theme-box.bgc-selected {
+  border-color: #0d6efd;
+  border-width: 4px;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(13,110,253,0.3);
+}
+
+.bgc-box-label {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.bgc-selection-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.bgc-selection-label {
+  font-weight: 600;
+  color: #495057;
+}

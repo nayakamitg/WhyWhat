@@ -64,6 +64,7 @@ const BootstrapFeed = ({ mode }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { search, setSearch } = useContext(SearchContext);
+  const { mainLanguage,setMainLanguage } = useContext(ThemeContext);
   const {
     categories,
     loading: catLoading,
@@ -178,7 +179,7 @@ const BootstrapFeed = ({ mode }) => {
             style={{ whiteSpace: "nowrap", cursor: "pointer" }}
             onClick={() => setSelectedCat(cat.nicheId)}
           >
-            {cat.title}
+            {mainLanguage=="en"?cat.title:onlyTwo(cat.description)}
           </div>
         ))}
       </div>
@@ -207,7 +208,7 @@ const BootstrapFeed = ({ mode }) => {
 const SinglePost = ({ userData, post, loggedIn, index }) => {
   const [activeOffcanvas, setActiveOffcanvas] = useState(null);
   const [following, setFollowing] = useState(false);
-  const { mode } = useContext(ThemeContext);
+  const { mode,mainLanguage,setMainLanguage } = useContext(ThemeContext);
   const navigate = useNavigate();
   const [showPostMenu, setShowPostMenu] = useState(false);
   const [showSuccessFavorite, setShowSuccessFavorite] = useState(true);
@@ -1354,4 +1355,14 @@ export function ShareTemplate({ question, answer, postId }) {
       </div>
     </>
   );
+}
+
+
+
+export const onlyTwo=(text)=>{
+  let splited=text.split(" ")
+  if(splited.length>2){
+    return splited[0].split(",")[0]+ " "+splited[1].split(",")[0]
+  }
+  return splited[0].split(",")[0]
 }

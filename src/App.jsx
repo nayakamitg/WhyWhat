@@ -26,6 +26,8 @@ import NewChat from "./assets/components/NewChat";
 import NewLogin from "./assets/components/NewLogin";
 import Notification from "./assets/components/Notification";
 import { ToastContainer } from "react-toastify";
+import Bg from "./assets/components/common/Bg";
+import BackgroundColorPicker from "./assets/components/common/Bg";
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -33,6 +35,7 @@ function App() {
   const [nicheId, setNicheId] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
   const [background, setBackground] = useState("");
+  const [mainLanguage, setMainLanguage] = useState(localStorage.getItem("i18nextLng")|| "hi");
   const [chatColor, setChatColor] = useState("");
   const [showSidebar, setShowSidebar] = useState(window.innerWidth > 700);
   const [mode, setMode] = useState(localStorage.getItem("mode") || "light");
@@ -65,6 +68,10 @@ function App() {
         {
           path: "/notification",
           element: <Notification />,
+        },
+        {
+          path: "/colors",
+          element: <BackgroundColorPicker />,
         },
 
         {
@@ -137,6 +144,8 @@ function App() {
           setChatColor,
           zoom,
           setZoom,
+          mainLanguage,
+          setMainLanguage
         }}
       >
         <LoginContext.Provider

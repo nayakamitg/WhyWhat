@@ -40,6 +40,7 @@ const debounce = (fn, delay) => {
 };
 
 const Header = ({ mode, setMode }) => {
+  const {mainLanguage,setMainLanguage}=useContext(ThemeContext)
   const [language, setLanguage] = useState(
     localStorage.getItem("i18nextLng") || "en"
   );
@@ -446,6 +447,7 @@ const handleDecrease = () => {
                           <Dropdown.Item
                             onClick={() => {
                               setLanguage("hi");
+                              setMainLanguage("hi")
                               i18n.changeLanguage('hi')
                             }}
                           >
@@ -454,6 +456,7 @@ const handleDecrease = () => {
                           <Dropdown.Item
                             onClick={() => {
                               setLanguage("en");
+                              setMainLanguage("en")
                               i18n.changeLanguage('en')
                             }}
                           >

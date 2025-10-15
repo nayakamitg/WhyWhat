@@ -17,6 +17,7 @@ import { Keyboard, Mousewheel, Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
 import { login } from "../../services/slices/userSlice";
+import { onlyTwo } from "../Home";
 
 const ChatLayout = () => {
   const loc = useLocation();
@@ -31,12 +32,12 @@ const ChatLayout = () => {
   const [posting, setPosting] = useState(false);
   const [mobile, setMobile] = useState(window.innerWidth < 700);
   const [initialSlide, setInitialSlide] = useState(0);
-  const [selectedChatColor, setSelectedChatColor] = useState("bg-white");
+  const [selectedChatColor, setSelectedChatColor] = useState("bg-white text-dark");
   const swiperRef = useRef(null);
 
   const { posts, loading, error } = useSelector((state) => state.post);
   const { t } = useTranslation();
-  const { mode, chatColor, setChatColor, background, setBackground } =
+  const { mode, chatColor, setChatColor, background, setBackground,mainLanguage } =
     useContext(ThemeContext);
   const {
     categories,
@@ -645,7 +646,7 @@ navigate("/login")
                 style={{ whiteSpace: "nowrap", cursor: "pointer" ,backgroundColor: "#F2F2F2"}}
                 onClick={() => setSelectedCat(cat.nicheId)}
               >
-                {cat.title}
+                {mainLanguage=="en"?cat.title:onlyTwo(cat.description)}
               </div>
             ))}
           </div>
@@ -1141,11 +1142,11 @@ navigate("/login")
             <div className="color-selector">
               <div
                 className={`color-option ${
-                  selectedChatColor==="bg-white" ? "selected" : ""
+                  selectedChatColor==="bg-white text-black" ? "selected" : ""
                 }`}
-                style={{ backgroundColor: "#ffffff" }}
+                style={{ backgroundColor: "#ffffffff" }}
                 onClick={() =>
-                  setSelectedChatColor("bg-white")
+                  setSelectedChatColor("bg-white text-black")
                 }
                 title="White"
               />
