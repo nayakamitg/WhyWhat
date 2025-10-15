@@ -1059,27 +1059,27 @@ body {
 }
 
 .gradient-26 {
-    background: linear-gradient(135deg, #d4f6f5 0%, #feebf1 100%);
+    background: linear-gradient(135deg, #30cfd0, #330867);
     color: white;
 }
 
 .gradient-27 {
-    background: linear-gradient(135deg, #fff6e9 0%, #fddbcf 100%);
+    background: linear-gradient(135deg, #f857a6, #ff5858); 
     color: white;
 }
 
 .gradient-28 {
-    background: linear-gradient(135deg, #ffcdcf 0%, #fee7f7 100%);
+    background: linear-gradient(135deg, #11998e, #38ef7d);
     color: white;
 }
 
 .gradient-29 {
-    background: linear-gradient(135deg, #d0c6e8 0%, #fde1f5 100%);
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
     color: white;
 }
 
 .gradient-30 {
-    background: linear-gradient(135deg, #fde8e2 0%, #ffe8ff 100%);
+     background: linear-gradient(135deg, #6a11cb, #2575fc);;
     color: white;
 }
 
@@ -1108,13 +1108,14 @@ body {
     color: white;
 }
 
+
 .gradient-36 {
-    background: linear-gradient(135deg, #d4f6f5 0%, #feebf1 100%);
+   background: linear-gradient(135deg, #f7971e, #ffd200);
     color: white;
 }
 
 .gradient-37 {
-    background: linear-gradient(135deg, #fff6e9 0%, #fddbcf 100%);
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
     color: white;
 }
 

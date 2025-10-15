@@ -66,27 +66,26 @@ export default function WhatsAppChat() {
     "@ram",
   ]);
 
-    const {
-        userData,
-        loggedIn,
-        loading: authLoading,
-        error: authError,
-      } = useSelector((state) => state.user);
-  
+  const {
+    userData,
+    loggedIn,
+    loading: authLoading,
+    error: authError,
+  } = useSelector((state) => state.user);
 
-    useEffect(() => {
-          if (!loggedIn) {
-            const googleData = JSON.parse(localStorage.getItem("googleUserData"));
-            if (googleData) {
-              dispatch(
-                login({
-                  handle: `@${googleData?.email?.split("@")[0]}`,
-                  googleData: googleData,
-                })
-              );
-            }
-          }
-        }, []);
+  useEffect(() => {
+    if (!loggedIn) {
+      const googleData = JSON.parse(localStorage.getItem("googleUserData"));
+      if (googleData) {
+        dispatch(
+          login({
+            handle: `@${googleData?.email?.split("@")[0]}`,
+            googleData: googleData,
+          })
+        );
+      }
+    }
+  }, []);
 
   const getConversationById = async (id) => {
     try {
@@ -140,25 +139,24 @@ export default function WhatsAppChat() {
         `${import.meta.env.VITE_API_BASE_URL}/Dialogues`,
         data
       );
-       setSingleConversation((prev) => ({
-  ...prev,
-  stories: [
-    ...(prev.stories || []),
-    {
-      answer: messageInput,
-      handle: userData.user.handle
-    }
-  ]
-}));
+      setSingleConversation((prev) => ({
+        ...prev,
+        stories: [
+          ...(prev.stories || []),
+          {
+            answer: messageInput,
+            handle: userData.user.handle,
+          },
+        ],
+      }));
 
-     setTimeout(() => {
+      setTimeout(() => {
         const container = containerRef.current;
         if (container) {
           container.scrollTop = container.scrollHeight;
         }
       }, 0);
-       setMessageInput("");
-      
+      setMessageInput("");
     } catch (e) {
       console.log("Not added", e);
     } finally {
@@ -173,14 +171,11 @@ export default function WhatsAppChat() {
   const handleSend = () => {
     if (!messageInput.trim()) return; // prevent empty messages
 
-    if(!loggedIn){
-      navigate("/login")
+    if (!loggedIn) {
+      navigate("/login");
+    } else {
+      createChat();
     }
-    else{
-    
-   createChat()
-    }
-
   };
 
   const handleClose = () => setShow(false);
@@ -683,12 +678,16 @@ overflow-x:auto;
         ) : (
           <div
             className={`chat-body ${
-              background==""?`${singleConversation?.background?.includes("Anim")
-                ? `anim`
-                : `pattern`}`:(background.includes("Anim")
+              background == ""
+                ? `${
+                    singleConversation?.background?.includes("Anim")
+                      ? `anim`
+                      : `pattern`
+                  }`
+                : background.includes("Anim")
                 ? "anim"
                 : "pattern"
-            )} ${background ? background:singleConversation?.background}`}
+            } ${background ? background : singleConversation?.background}`}
             ref={containerRef}
           >
             {searchShow && (
@@ -819,7 +818,9 @@ overflow-x:auto;
                   {msg.sender == "me" ? "You" : "User"}
                 </p>
               </div> */}
-              <div className={`message-wrapper-time m-0 p-0 ${"received"} justify-content-center`}>
+              <div
+                className={`message-wrapper-time m-0 p-0 ${"received"} justify-content-center`}
+              >
                 <div
                   className={`message-box-time rounded-2 m-0 p-1 px-2 ${"received"}`}
                 >
@@ -843,16 +844,18 @@ overflow-x:auto;
               </div>
             </div>
 
-            {singleConversation?.stories?.filter((msg)=>msg.answer!==null && msg.answer!=="").map((msg, index) => (
-              <div
-                className={`chatUserProfile d-flex flex-column ${
-                  !isQuestion(msg?.answer)
-                    ? "align-items-end"
-                    : "align-items-start"
-                }`}
-              >
-                {" "}
-                {/* <div
+            {singleConversation?.stories
+              ?.filter((msg) => msg.answer !== null && msg.answer !== "")
+              .map((msg, index) => (
+                <div
+                  className={`chatUserProfile d-flex flex-column ${
+                    !isQuestion(msg?.answer)
+                      ? "align-items-end"
+                      : "align-items-start"
+                  }`}
+                >
+                  {" "}
+                  {/* <div
                 className={`User-info d-flex align-items-center gap-1 ${
                   msg.sender == "me" ? "flex-row-reverse" : ""
                 }`}
@@ -862,45 +865,50 @@ overflow-x:auto;
                   {msg.sender == "me" ? "You" : "User"}
                 </p>
               </div> */}
-                <div
-                  key={msg.id}
-                  className={`message-wrapper ${
-                    !isQuestion(msg?.answer) ? "sent" : "received"
-                  }`}
-                >
                   <div
-                    className={`message-box ${
-                      !isQuestion(msg?.answer) ? `sent ${chatColor!=""?chatColor:singleConversation.theme}` : "received"
+                    key={msg.id}
+                    className={`message-wrapper ${
+                      !isQuestion(msg?.answer) ? "sent" : "received"
                     }`}
                   >
-                    <div className="message-text">
-                      {formatText(msg?.answer)}
-                    </div>
-                    <div className="message-footer">
-                      <span className="message-time">
-                        <div
-                          className={`User-info d-flex align-items-center gap-1 ${"flex-row-reverse"}`}
-                        >
-                          {/* <div className="avatar-card">A</div> */}
-                          <small
-                            onClick={() =>
-                              navigate(`/userprofile/${msg.handle}`)
-                            }
-                            style={{
-                              fontSize: "12px",
-                              cursor: "pointer"
-                              
-                            }}
+                    <div
+                      className={`message-box ${
+                        !isQuestion(msg?.answer)
+                          ? `sent ${
+                              chatColor != ""
+                                ? chatColor
+                                : singleConversation.theme
+                            }`
+                          : "received"
+                      }`}
+                    >
+                      <div className="message-text">
+                        {formatText(msg?.answer)}
+                      </div>
+                      <div className="message-footer">
+                        <span className="message-time">
+                          <div
+                            className={`User-info d-flex align-items-center gap-1 ${"flex-row-reverse"}`}
                           >
-                            {`${msg?.handle}`}
-                          </small>
-                        </div>
-                      </span>
+                            {/* <div className="avatar-card">A</div> */}
+                            <small
+                              onClick={() =>
+                                navigate(`/userprofile/${msg.handle}`)
+                              }
+                              style={{
+                                fontSize: "12px",
+                                cursor: "pointer",
+                              }}
+                            >
+                              {`${msg?.handle}`}
+                            </small>
+                          </div>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         )}
 
@@ -908,26 +916,45 @@ overflow-x:auto;
         <div className="chat-footer">
           <div className="input-wrapper">
             <div className="input-container">
-            
               <input
                 type="text"
                 value={messageInput}
                 onChange={(e) => handleChange(e)}
                 placeholder="Message"
-                onKeyDown={(e) => 
-                   (e.key === "Enter" && !e.shiftKey) && handleSend()
-                 
+                onKeyDown={(e) =>
+                  e.key === "Enter" && !e.shiftKey && handleSend()
                 }
               />
-             
             </div>
             {sendShow ? (
-              <button disabled={messageInput.trim()==""} className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} onClick={handleSend}>
-                <SendHorizontal className={chatColor!==""?chatColor:singleConversation.theme} color="black" />
+              <button
+                disabled={messageInput.trim() == ""}
+                className={`mic-button ${
+                  chatColor !== "" ? chatColor : singleConversation.theme
+                }`}
+                onClick={handleSend}
+              >
+                <SendHorizontal
+                  className={
+                    chatColor !== "" ? chatColor : singleConversation.theme
+                  }
+                  color="black"
+                />
               </button>
             ) : (
-               <button disabled={messageInput.trim()==""} className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} onClick={handleSend}>
-                <SendHorizontal className={chatColor!==""?chatColor:singleConversation.theme} color="black" />
+              <button
+                disabled={messageInput.trim() == ""}
+                className={`mic-button ${
+                  chatColor !== "" ? chatColor : singleConversation.theme
+                }`}
+                onClick={handleSend}
+              >
+                <SendHorizontal
+                  className={
+                    chatColor !== "" ? chatColor : singleConversation.theme
+                  }
+                  color="black"
+                />
               </button>
               // <button className={`mic-button ${chatColor!==""?chatColor:singleConversation.theme}`} >
               //   <Mic className={chatColor!==""?chatColor:singleConversation.theme} color="black"/>
@@ -946,7 +973,7 @@ overflow-x:auto;
         style={{
           marginLeft: showSidebar ? "350px" : "0",
           width: showSidebar ? "calc(100vw - 350px)" : "100%",
-          height:"500px"
+          height: "500px",
         }}
       >
         <Offcanvas.Header closeButton className="off-header">
@@ -955,7 +982,7 @@ overflow-x:auto;
         <Offcanvas.Body>
           <div
             className="btn btn-outline-danger btn-sm py-1 apply-theme-btn"
-              style={{color:"#fd8181ff",borderColor:"#fd8181ff"}}
+            style={{ color: "#fd8181ff", borderColor: "#fd8181ff" }}
             onClick={() => {
               setBackground("");
               setChatColor("");
@@ -966,11 +993,9 @@ overflow-x:auto;
           </div>
           <div
             className="btn btn-outline-danger btn-sm py-1 ms-2 apply-theme-btn"
-              style={{color:"#fd8181ff",borderColor:"#fd8181ff"}}
+            style={{ color: "#fd8181ff", borderColor: "#fd8181ff" }}
             onClick={() => {
-              setChatColor(
-                "ChatWhatsappTheme",
-              );
+              setChatColor("ChatWhatsappTheme");
               setBackground("bg-secondary");
             }}
           >
@@ -1069,21 +1094,39 @@ overflow-x:auto;
           <div className="bgparent d-flex gap-2 pb-5">
             <div
               className="box border justify-content-center"
-              onClick={() =>
-                setChatColor(
-                  "bg-light text-dark"
-                 
-                )
-              }
+              onClick={() => setChatColor("bg-light text-dark")}
             >
               <Ban size={30} />
             </div>
 
             {colors.map((col) => (
               <div
-                className={`box ${col}`}
+                className={`box d-flex justify-content-center flex-column ${
+              background == ""
+                ? `${
+                    singleConversation?.background?.includes("Anim")
+                      ? `anim`
+                      : `pattern`
+                  }`
+                : background.includes("Anim")
+                ? "anim"
+                : "pattern"
+            } ${background ? background : singleConversation?.background}`}
                 onClick={() => setChatColor(col)}
-              ></div>
+              >
+                <div className="box-recieve-wrap">
+                  <div className="box-recieve"></div>
+                </div>
+                <div className="box-send-wrap">
+                  <div className={`box-send ${col}`}></div>
+                </div>
+                <div className="box-recieve-wrap">
+                  <div className="box-recieve"></div>
+                </div>
+                <div className="box-send-wrap">
+                  <div className={`box-send ${col}`}></div>
+                </div>
+              </div>
             ))}
           </div>
         </Offcanvas.Body>
@@ -1220,6 +1263,13 @@ export const backgrounds = {
     "PaternBg40",
   ],
   Gradient: [
+    "gradient-1",
+    "gradient-2",
+    "gradient-3",
+    "gradient-4",
+    "gradient-5",
+    "gradient-6",
+   
     "gradient-22",
     "gradient-23",
     "gradient-24",
@@ -1254,5 +1304,5 @@ export const colors = [
   "ChatTheme7",
   "ChatTheme8",
   "ChatWhatsappTheme",
-  "ChatDefaultTheme"
+  "ChatDefaultTheme",
 ];
