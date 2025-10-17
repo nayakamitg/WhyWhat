@@ -303,7 +303,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
                 onClick={() => navigate(`/userprofile/${post.handle}`)}
               >
                 <img
-                  src={post.avatar}
+                  src={post.avatar || "/profile.webp"}
                   onError={(e) => (e.target.src = "/profile.webp")}
                   className="avatar rounded-circle"
                 />
@@ -349,7 +349,7 @@ const SinglePost = ({ userData, post, loggedIn, index }) => {
               className="post-description mb-0 d-flex justify-content-between align-items-center fw-bold pt-3"
               onClick={() => navigate(`/question/${post.id}`)}
             >
-              {post.description}
+              {post.title}
             </div>
           </div>
           <div className="d-flex flex-column justify-content-center">
