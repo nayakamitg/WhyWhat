@@ -560,7 +560,7 @@ console.log("reo",reorderedPosts)
             onClick={() => navigate(-1)}
           />
           <p className="Question fw-bold lh-base">
-            {reorderedPosts[initialSlideIndex].description}
+            {reorderedPosts[initialSlideIndex].title}
           </p>
         </div>
         <Swiper
@@ -913,7 +913,7 @@ console.log("reo",reorderedPosts)
               style={{color:post.background || "black"}}
                
               />
-              <p className="Question  lh-base" style={{color:post.background || "black"}}>{post.description}</p>
+              <p className="Question  lh-base" style={{color:post.background || "black"}}>{post.title}</p>
             </div>
 
             <Swiper
